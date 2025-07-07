@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
+    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Admin Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="admin-dashboard.html">
+                <i class="fas fa-crown me-2"></i>PhotoBook Admin
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-users.html">
+                            <i class="fas fa-users me-1"></i>Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-orders.html">
+                            <i class="fas fa-shopping-cart me-1"></i>Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-albums.html">
+                            <i class="fas fa-book me-1"></i>Albums
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin-moderation.html">
+                            <i class="fas fa-flag me-1"></i>Moderation
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-analytics.html">
+                            <i class="fas fa-chart-bar me-1"></i>Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-settings.html">
+                            <i class="fas fa-cog me-1"></i>Settings
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">5</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-exclamation-triangle text-warning"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">High Server Load</div>
+                                        <small class="text-muted">Server CPU at 85%</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-user-plus text-success"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">New User Registration</div>
+                                        <small class="text-muted">25 new users today</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                            <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=AD" alt="Admin" class="rounded-circle me-2" width="24" height="24">
+                            <span>Admin User</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="admin-profile.html">
+                                <i class="fas fa-user-cog me-2"></i>Profile Settings
+                            </a></li>
+                            <li><a class="dropdown-item" href="admin-settings.html">
+                                <i class="fas fa-cog me-2"></i>System Settings
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html">
+                                <i class="fas fa-sign-out-alt me-2"></i>Logout
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid py-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 fw-bold mb-1">Album Detail & Moderation</h1>
+                <p class="text-muted mb-0">Review album, download, approve, reject, flag, and add notes.</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-secondary" id="downloadAlbum"><i class="fas fa-download me-2"></i>Download Album</button>
+                <button class="btn btn-outline-success" id="approveAlbum"><i class="fas fa-check me-2"></i>Approve</button>
+                <button class="btn btn-outline-danger" id="rejectAlbum"><i class="fas fa-times me-2"></i>Reject</button>
+                <button class="btn btn-outline-warning" id="flagAlbum"><i class="fas fa-flag me-2"></i>Flag</button>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0"><i class="fas fa-images text-primary me-2"></i>Album Photos</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-2">
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="https://via.placeholder.com/300x200/007bff/ffffff?text=Photo+1" class="img-fluid rounded shadow-sm mb-2" alt="Photo 1">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Photo+2" class="img-fluid rounded shadow-sm mb-2" alt="Photo 2">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="https://via.placeholder.com/300x200/fd7e14/ffffff?text=Photo+3" class="img-fluid rounded shadow-sm mb-2" alt="Photo 3">
+                            </div>
+                            <div class="col-6 col-md-4 col-lg-3">
+                                <img src="https://via.placeholder.com/300x200/dc3545/ffffff?text=Photo+4" class="img-fluid rounded shadow-sm mb-2" alt="Photo 4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0"><i class="fas fa-info-circle text-primary me-2"></i>Album Info</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="fw-bold">Summer 2024</h6>
+                        <p class="mb-1"><strong>User:</strong> John Doe</p>
+                        <p class="mb-1"><strong>Date Created:</strong> 2024-04-20</p>
+                        <p class="mb-1"><strong>Status:</strong> <span class="badge bg-warning">Pending</span></p>
+                        <p class="mb-1"><strong>Photos:</strong> 4</p>
+                        <p class="mb-1"><strong>Description:</strong> Summer vacation memories with family and friends.</p>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0"><i class="fas fa-comments text-primary me-2"></i>Admin Notes</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="notesForm">
+                            <textarea class="form-control mb-2" rows="3" placeholder="Add notes for this album..."></textarea>
+                            <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save me-2"></i>Save Note</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0"><i class="fas fa-history text-primary me-2"></i>Activity Log</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">2024-04-21 10:00 - Album created by John Doe</li>
+                            <li class="list-group-item">2024-04-21 10:05 - Flagged for review</li>
+                            <li class="list-group-item">2024-04-21 10:10 - Note added by Admin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
+            toast.style.top = '20px';
+            toast.style.right = '20px';
+            toast.style.zIndex = '9999';
+            toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+            toast.addEventListener('hidden.bs.toast', function() { document.body.removeChild(toast); });
+        }
+        document.getElementById('downloadAlbum').addEventListener('click', function() {
+            showToast('Album download started.', 'info');
+        });
+        document.getElementById('approveAlbum').addEventListener('click', function() {
+            showToast('Album approved!', 'success');
+        });
+        document.getElementById('rejectAlbum').addEventListener('click', function() {
+            showToast('Album rejected.', 'danger');
+        });
+        document.getElementById('flagAlbum').addEventListener('click', function() {
+            showToast('Album flagged for further review.', 'warning');
+        });
+        document.getElementById('notesForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('Note saved!', 'success');
+        });
+    </script>
+</body>
+</html> 

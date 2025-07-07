@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
+    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Admin Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="admin-dashboard.html">
+                <i class="fas fa-crown me-2"></i>PhotoBook Admin
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-users.html">
+                            <i class="fas fa-users me-1"></i>Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-orders.html">
+                            <i class="fas fa-shopping-cart me-1"></i>Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-albums.html">
+                            <i class="fas fa-book me-1"></i>Albums
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-analytics.html">
+                            <i class="fas fa-chart-bar me-1"></i>Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-settings.html">
+                            <i class="fas fa-cog me-1"></i>Settings
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                5
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-exclamation-triangle text-warning"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">High Server Load</div>
+                                        <small class="text-muted">Server CPU at 85%</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-user-plus text-success"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">New User Registration</div>
+                                        <small class="text-muted">25 new users today</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                            <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=AD" alt="Admin" class="rounded-circle me-2" width="24" height="24">
+                            <span>Admin User</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="admin-profile.html">
+                                <i class="fas fa-user-cog me-2"></i>Profile Settings
+                            </a></li>
+                            <li><a class="dropdown-item" href="admin-settings.html">
+                                <i class="fas fa-cog me-2"></i>System Settings
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html">
+                                <i class="fas fa-sign-out-alt me-2"></i>Logout
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-4">
+        <!-- Page Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 fw-bold mb-1">Support & Logs</h1>
+                <p class="text-muted mb-0">View support tickets, system logs, and alerts</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-life-ring text-primary me-2"></i>Support Tickets
+                        </h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Ticket #</th>
+                                        <th>User</th>
+                                        <th>Subject</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ST-1001</td>
+                                        <td>John Doe</td>
+                                        <td>Order not received</td>
+                                        <td><span class="badge bg-warning">Open</span></td>
+                                        <td>2024-05-01</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ST-1002</td>
+                                        <td>Sarah Mitchell</td>
+                                        <td>Payment issue</td>
+                                        <td><span class="badge bg-success">Resolved</span></td>
+                                        <td>2024-05-02</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-clipboard-list text-primary me-2"></i>System Logs
+                        </h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Log #</th>
+                                        <th>Type</th>
+                                        <th>Message</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>LG-2001</td>
+                                        <td><span class="badge bg-info">Info</span></td>
+                                        <td>Server started successfully</td>
+                                        <td>2024-05-01 09:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>LG-2002</td>
+                                        <td><span class="badge bg-danger">Error</span></td>
+                                        <td>Payment gateway timeout</td>
+                                        <td>2024-05-01 10:15</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-exclamation-triangle text-primary me-2"></i>System Alerts
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-server text-warning me-2"></i> High server load detected
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-database text-danger me-2"></i> Database backup failed
+                            </li>
+                            <li class="list-group-item d-flex align-items-center">
+                                <i class="fas fa-user-plus text-success me-2"></i> 25 new users registered today
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

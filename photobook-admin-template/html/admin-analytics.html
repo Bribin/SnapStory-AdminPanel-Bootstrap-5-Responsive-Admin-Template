@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
+    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Admin Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="admin-dashboard.html">
+                <i class="fas fa-crown me-2"></i>PhotoBook Admin
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-users.html">
+                            <i class="fas fa-users me-1"></i>Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-orders.html">
+                            <i class="fas fa-shopping-cart me-1"></i>Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-albums.html">
+                            <i class="fas fa-book me-1"></i>Albums
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin-analytics.html">
+                            <i class="fas fa-chart-bar me-1"></i>Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-settings.html">
+                            <i class="fas fa-cog me-1"></i>Settings
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                5
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-exclamation-triangle text-warning"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">High Server Load</div>
+                                        <small class="text-muted">Server CPU at 85%</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-user-plus text-success"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">New User Registration</div>
+                                        <small class="text-muted">25 new users today</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                            <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=AD" alt="Admin" class="rounded-circle me-2" width="24" height="24">
+                            <span>Admin User</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="admin-profile.html">
+                                <i class="fas fa-user-cog me-2"></i>Profile Settings
+                            </a></li>
+                            <li><a class="dropdown-item" href="admin-settings.html">
+                                <i class="fas fa-cog me-2"></i>System Settings
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html">
+                                <i class="fas fa-sign-out-alt me-2"></i>Logout
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-4">
+        <!-- Page Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 fw-bold mb-1">Analytics & Reports</h1>
+                <p class="text-muted mb-0">Track platform performance and trends</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary">
+                    <i class="fas fa-file-export me-2"></i>Export Report
+                </button>
+            </div>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="row g-4 mb-4">
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-primary bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Total Users</h6>
+                                <h3 class="mb-0 fw-bold">12,847</h3>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up me-1"></i>+12% this month
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-success bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-shopping-cart text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Total Orders</h6>
+                                <h3 class="mb-0 fw-bold">8,234</h3>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up me-1"></i>+8% this month
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-warning bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-dollar-sign text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Revenue</h6>
+                                <h3 class="mb-0 fw-bold">$124,567</h3>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up me-1"></i>+15% this month
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-info bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-book text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Albums Created</h6>
+                                <h3 class="mb-0 fw-bold">15,432</h3>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up me-1"></i>+20% this month
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="row g-4 mb-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-chart-line text-primary me-2"></i>Revenue Overview
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-chart-pie text-primary me-2"></i>User Distribution
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="userChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders Trend Chart -->
+        <div class="row g-4 mb-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-white border-0 py-3">
+                        <h5 class="fw-bold mb-0">
+                            <i class="fas fa-chart-area text-primary me-2"></i>Orders Trend
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container" style="height: 300px;">
+                            <canvas id="ordersChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/chart.min.js"></script>
+    <script>
+        // Revenue Chart
+        const revenueCtx = document.getElementById('revenueChart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Revenue',
+                    data: [12000, 19000, 15000, 25000, 22000, 30000],
+                    borderColor: '#007bff',
+                    backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            }
+        });
+        // User Distribution Chart
+        const userCtx = document.getElementById('userChart').getContext('2d');
+        new Chart(userCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Active Users', 'Premium Users', 'New Users', 'Inactive'],
+                datasets: [{
+                    data: [65, 20, 10, 5],
+                    backgroundColor: [
+                        '#28a745',
+                        '#007bff',
+                        '#ffc107',
+                        '#dc3545'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+        // Orders Trend Chart
+        const ordersCtx = document.getElementById('ordersChart').getContext('2d');
+        new Chart(ordersCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Orders',
+                    data: [800, 1200, 950, 1500, 1300, 1700],
+                    backgroundColor: '#28a745'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 

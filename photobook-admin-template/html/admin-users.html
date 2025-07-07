@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
+    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/fontawesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Admin Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="admin-dashboard.html">
+                <i class="fas fa-crown me-2"></i>PhotoBook Admin
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-dashboard.html">
+                            <i class="fas fa-tachometer-alt me-1"></i>Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="admin-users.html">
+                            <i class="fas fa-users me-1"></i>Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-orders.html">
+                            <i class="fas fa-shopping-cart me-1"></i>Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-albums.html">
+                            <i class="fas fa-book me-1"></i>Albums
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-analytics.html">
+                            <i class="fas fa-chart-bar me-1"></i>Analytics
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin-settings.html">
+                            <i class="fas fa-cog me-1"></i>Settings
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                5
+                            </span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-exclamation-triangle text-warning"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">High Server Load</div>
+                                        <small class="text-muted">Server CPU at 85%</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0">
+                                        <i class="fas fa-user-plus text-success"></i>
+                                    </div>
+                                    <div class="flex-grow-1 ms-3">
+                                        <div class="fw-bold">New User Registration</div>
+                                        <small class="text-muted">25 new users today</small>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
+                            <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=AD" alt="Admin" class="rounded-circle me-2" width="24" height="24">
+                            <span>Admin User</span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="admin-profile.html">
+                                <i class="fas fa-user-cog me-2"></i>Profile Settings
+                            </a></li>
+                            <li><a class="dropdown-item" href="admin-settings.html">
+                                <i class="fas fa-cog me-2"></i>System Settings
+                            </a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html">
+                                <i class="fas fa-sign-out-alt me-2"></i>Logout
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid py-4">
+        <!-- Page Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 fw-bold mb-1">User Management</h1>
+                <p class="text-muted mb-0">Manage user accounts, permissions, and activity</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                    <i class="fas fa-user-plus me-2"></i>Add User
+                </button>
+                <button class="btn btn-primary">
+                    <i class="fas fa-download me-2"></i>Export Users
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="row g-4 mb-4">
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-primary bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-users text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Total Users</h6>
+                                <h3 class="mb-0 fw-bold">12,847</h3>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up me-1"></i>+156 this week
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-success bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-user-check text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Active Users</h6>
+                                <h3 class="mb-0 fw-bold">10,234</h3>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up me-1"></i>+89 this week
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-warning bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-crown text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Premium Users</h6>
+                                <h3 class="mb-0 fw-bold">2,456</h3>
+                                <small class="text-success">
+                                    <i class="fas fa-arrow-up me-1"></i>+23 this week
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="metric-icon bg-danger bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-user-times text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-muted">Suspended Users</h6>
+                                <h3 class="mb-0 fw-bold">45</h3>
+                                <small class="text-danger">
+                                    <i class="fas fa-arrow-down me-1"></i>-5 this week
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters and Search -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-text bg-white border-end-0">
+                                <i class="fas fa-search text-muted"></i>
+                            </span>
+                            <input type="text" class="form-control border-start-0" placeholder="Search users..." id="searchInput">
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select" id="statusFilter">
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="suspended">Suspended</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select" id="roleFilter">
+                            <option value="">All Roles</option>
+                            <option value="user">User</option>
+                            <option value="premium">Premium</option>
+                            <option value="admin">Admin</option>
+                            <option value="moderator">Moderator</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select" id="dateFilter">
+                            <option value="">All Time</option>
+                            <option value="today">Today</option>
+                            <option value="week">This Week</option>
+                            <option value="month">This Month</option>
+                            <option value="year">This Year</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-outline-secondary w-100" id="clearFilters">
+                            <i class="fas fa-times me-2"></i>Clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Table -->
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-white border-0 py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="fw-bold mb-0">Users List</h5>
+                    <div class="d-flex gap-2">
+                        <span class="text-muted">Showing 1-10 of 12,847 users</span>
+                        <select class="form-select form-select-sm" style="width: auto;">
+                            <option>10 per page</option>
+                            <option>25 per page</option>
+                            <option>50 per page</option>
+                            <option>100 per page</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>
+                                    <input type="checkbox" class="form-check-input" id="selectAll">
+                                </th>
+                                <th>User</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Joined</th>
+                                <th>Last Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input user-checkbox">
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=JD" alt="User" class="rounded-circle me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">John Doe</h6>
+                                            <small class="text-muted">ID: #12345</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>john.doe@example.com</td>
+                                <td>
+                                    <span class="badge bg-primary">Premium</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-success">Active</span>
+                                </td>
+                                <td>Jan 15, 2024</td>
+                                <td>2 hours ago</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                            Actions
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewUserModal">
+                                                <i class="fas fa-eye me-2"></i>View Details
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                <i class="fas fa-edit me-2"></i>Edit User
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-key me-2"></i>Reset Password
+                                            </a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item text-warning" href="#">
+                                                <i class="fas fa-ban me-2"></i>Suspend User
+                                            </a></li>
+                                            <li><a class="dropdown-item text-danger" href="#">
+                                                <i class="fas fa-trash me-2"></i>Delete User
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input user-checkbox">
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=SM" alt="User" class="rounded-circle me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">Sarah Mitchell</h6>
+                                            <small class="text-muted">ID: #12346</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>sarah.m@example.com</td>
+                                <td>
+                                    <span class="badge bg-secondary">User</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-success">Active</span>
+                                </td>
+                                <td>Jan 20, 2024</td>
+                                <td>1 day ago</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                            Actions
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewUserModal">
+                                                <i class="fas fa-eye me-2"></i>View Details
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                <i class="fas fa-edit me-2"></i>Edit User
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-key me-2"></i>Reset Password
+                                            </a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item text-warning" href="#">
+                                                <i class="fas fa-ban me-2"></i>Suspend User
+                                            </a></li>
+                                            <li><a class="dropdown-item text-danger" href="#">
+                                                <i class="fas fa-trash me-2"></i>Delete User
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input user-checkbox">
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/40x40/dc3545/ffffff?text=ML" alt="User" class="rounded-circle me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">Mike Johnson</h6>
+                                            <small class="text-muted">ID: #12347</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>mike.j@example.com</td>
+                                <td>
+                                    <span class="badge bg-primary">Premium</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-warning">Suspended</span>
+                                </td>
+                                <td>Dec 10, 2023</td>
+                                <td>5 days ago</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                            Actions
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewUserModal">
+                                                <i class="fas fa-eye me-2"></i>View Details
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                <i class="fas fa-edit me-2"></i>Edit User
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-key me-2"></i>Reset Password
+                                            </a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item text-success" href="#">
+                                                <i class="fas fa-check me-2"></i>Activate User
+                                            </a></li>
+                                            <li><a class="dropdown-item text-danger" href="#">
+                                                <i class="fas fa-trash me-2"></i>Delete User
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input user-checkbox">
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/40x40/6f42c1/ffffff?text=EL" alt="User" class="rounded-circle me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">Emma Wilson</h6>
+                                            <small class="text-muted">ID: #12348</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>emma.w@example.com</td>
+                                <td>
+                                    <span class="badge bg-info">Admin</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-success">Active</span>
+                                </td>
+                                <td>Nov 5, 2023</td>
+                                <td>30 minutes ago</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                            Actions
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewUserModal">
+                                                <i class="fas fa-eye me-2"></i>View Details
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                <i class="fas fa-edit me-2"></i>Edit User
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-key me-2"></i>Reset Password
+                                            </a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item text-warning" href="#">
+                                                <i class="fas fa-ban me-2"></i>Suspend User
+                                            </a></li>
+                                            <li><a class="dropdown-item text-danger" href="#">
+                                                <i class="fas fa-trash me-2"></i>Delete User
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="form-check-input user-checkbox">
+                                </td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="https://via.placeholder.com/40x40/fd7e14/ffffff?text=DL" alt="User" class="rounded-circle me-3">
+                                        <div>
+                                            <h6 class="fw-bold mb-0">David Lee</h6>
+                                            <small class="text-muted">ID: #12349</small>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>david.l@example.com</td>
+                                <td>
+                                    <span class="badge bg-secondary">User</span>
+                                </td>
+                                <td>
+                                    <span class="badge bg-secondary">Inactive</span>
+                                </td>
+                                <td>Jan 25, 2024</td>
+                                <td>2 weeks ago</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown">
+                                            Actions
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#viewUserModal">
+                                                <i class="fas fa-eye me-2"></i>View Details
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                                                <i class="fas fa-edit me-2"></i>Edit User
+                                            </a></li>
+                                            <li><a class="dropdown-item" href="#">
+                                                <i class="fas fa-key me-2"></i>Reset Password
+                                            </a></li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a class="dropdown-item text-success" href="#">
+                                                <i class="fas fa-check me-2"></i>Activate User
+                                            </a></li>
+                                            <li><a class="dropdown-item text-danger" href="#">
+                                                <i class="fas fa-trash me-2"></i>Delete User
+                                            </a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="card-footer bg-white border-0 py-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <span class="text-muted">Selected: <span id="selectedCount">0</span> users</span>
+                        <button class="btn btn-sm btn-outline-danger ms-3" id="bulkDelete" disabled>
+                            <i class="fas fa-trash me-1"></i>Delete Selected
+                        </button>
+                    </div>
+                    <nav>
+                        <ul class="pagination pagination-sm mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#"><i class="fas fa-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><i class="fas fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add New User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addUserForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">First Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Last Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Email Address *</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Password *</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Confirm Password *</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Role *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select Role</option>
+                                    <option value="user">User</option>
+                                    <option value="premium">Premium</option>
+                                    <option value="moderator">Moderator</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Status *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select Status</option>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                    <option value="pending">Pending</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Notes</label>
+                                <textarea class="form-control" rows="3" placeholder="Additional notes about the user..."></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="addUserForm" class="btn btn-primary">
+                        <i class="fas fa-user-plus me-2"></i>Add User
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- View User Modal -->
+    <div class="modal fade" id="viewUserModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">User Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="https://via.placeholder.com/150x150/007bff/ffffff?text=JD" alt="User" class="rounded-circle mb-3">
+                            <h5 class="fw-bold">John Doe</h5>
+                            <span class="badge bg-primary">Premium User</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Email</label>
+                                    <p class="mb-0">john.doe@example.com</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Phone</label>
+                                    <p class="mb-0">+1 (555) 123-4567</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Joined</label>
+                                    <p class="mb-0">January 15, 2024</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Last Active</label>
+                                    <p class="mb-0">2 hours ago</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Albums Created</label>
+                                    <p class="mb-0">12 albums</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-semibold">Total Orders</label>
+                                    <p class="mb-0">8 orders</p>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Address</label>
+                                    <p class="mb-0">123 Main St, City, State 12345</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                        <i class="fas fa-edit me-2"></i>Edit User
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit User Modal -->
+    <div class="modal fade" id="editUserModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editUserForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">First Name *</label>
+                                <input type="text" class="form-control" value="John" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Last Name *</label>
+                                <input type="text" class="form-control" value="Doe" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Email Address *</label>
+                                <input type="email" class="form-control" value="john.doe@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Role *</label>
+                                <select class="form-select" required>
+                                    <option value="user">User</option>
+                                    <option value="premium" selected>Premium</option>
+                                    <option value="moderator">Moderator</option>
+                                    <option value="admin">Admin</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Status *</label>
+                                <select class="form-select" required>
+                                    <option value="active" selected>Active</option>
+                                    <option value="inactive">Inactive</option>
+                                    <option value="suspended">Suspended</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Notes</label>
+                                <textarea class="form-control" rows="3">Premium user with excellent engagement.</textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" form="editUserForm" class="btn btn-primary">
+                        <i class="fas fa-save me-2"></i>Save Changes
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enhanced user management functionality
+        let selectedUsers = [];
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Filter functionality
+        function applyFilters() {
+            const statusFilter = document.getElementById('statusFilter').value;
+            const roleFilter = document.getElementById('roleFilter').value;
+            const dateFilter = document.getElementById('dateFilter').value;
+            
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                const status = row.querySelector('td:nth-child(5) .badge').textContent.toLowerCase();
+                const role = row.querySelector('td:nth-child(4) .badge').textContent.toLowerCase();
+                
+                let showRow = true;
+                
+                if (statusFilter && status !== statusFilter) showRow = false;
+                if (roleFilter && role !== roleFilter) showRow = false;
+                
+                row.style.display = showRow ? '' : 'none';
+            });
+        }
+
+        document.getElementById('statusFilter').addEventListener('change', applyFilters);
+        document.getElementById('roleFilter').addEventListener('change', applyFilters);
+        document.getElementById('dateFilter').addEventListener('change', applyFilters);
+
+        // Clear filters
+        document.getElementById('clearFilters').addEventListener('click', function() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('statusFilter').value = '';
+            document.getElementById('roleFilter').value = '';
+            document.getElementById('dateFilter').value = '';
+            
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => row.style.display = '');
+        });
+
+        // Select all functionality
+        document.getElementById('selectAll').addEventListener('change', function() {
+            const checkboxes = document.querySelectorAll('.user-checkbox');
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = this.checked;
+                if (this.checked) {
+                    selectedUsers.push(checkbox.closest('tr'));
+                } else {
+                    selectedUsers = [];
+                }
+            });
+            updateSelectedCount();
+        });
+
+        // Individual checkbox selection
+        document.querySelectorAll('.user-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const row = this.closest('tr');
+                if (this.checked) {
+                    selectedUsers.push(row);
+                } else {
+                    selectedUsers = selectedUsers.filter(r => r !== row);
+                }
+                updateSelectedCount();
+            });
+        });
+
+        function updateSelectedCount() {
+            const count = selectedUsers.length;
+            document.getElementById('selectedCount').textContent = count;
+            document.getElementById('bulkDelete').disabled = count === 0;
+        }
+
+        // Bulk delete
+        document.getElementById('bulkDelete').addEventListener('click', function() {
+            if (confirm(`Are you sure you want to delete ${selectedUsers.length} selected users?`)) {
+                selectedUsers.forEach(row => {
+                    row.remove();
+                });
+                selectedUsers = [];
+                updateSelectedCount();
+                showToast(`${selectedUsers.length} users deleted successfully.`, 'success');
+            }
+        });
+
+        // Form submissions
+        document.getElementById('addUserForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('User added successfully!', 'success');
+            bootstrap.Modal.getInstance(document.getElementById('addUserModal')).hide();
+        });
+
+        document.getElementById('editUserForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            showToast('User updated successfully!', 'success');
+            bootstrap.Modal.getInstance(document.getElementById('editUserModal')).hide();
+        });
+
+        // Toast notification system
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
+            toast.style.top = '20px';
+            toast.style.right = '20px';
+            toast.style.zIndex = '9999';
+            
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            `;
+            
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+            
+            toast.addEventListener('hidden.bs.toast', function() {
+                document.body.removeChild(toast);
+            });
+        }
+
+        // Initialize user management
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSelectedCount();
+            
+            // Add entrance animations
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+
+    <style>
+        /* User management specific styles */
+        .metric-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .card:hover .metric-icon {
+            transform: scale(1.1);
+        }
+        
+        .table tbody tr {
+            transition: var(--transition);
+        }
+        
+        .table tbody tr:hover {
+            background-color: rgba(0, 123, 255, 0.05);
+        }
+        
+        .dropdown-item {
+            transition: var(--transition);
+        }
+        
+        .dropdown-item:hover {
+            background-color: rgba(0, 123, 255, 0.1);
+        }
+        
+        .pagination .page-link {
+            border: none;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .pagination .page-link:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .pagination .page-item.active .page-link {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .navbar-dark {
+            background: linear-gradient(135deg, #343a40, #495057) !important;
+        }
+        
+        .btn-outline-light:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .modal-content {
+            border: none;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .table-responsive {
+                font-size: 0.875rem;
+            }
+            
+            .btn-sm {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.5rem;
+            }
+        }
+    </style>
+</body>
+</html> 

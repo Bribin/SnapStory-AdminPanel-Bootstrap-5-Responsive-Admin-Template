@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
+    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html">
+                <i class="fas fa-book-open me-2"></i>PhotoBook
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a href="login.html" class="nav-link">Already have an account? <span class="text-primary fw-bold">Login</span></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="row g-5">
+                    <!-- Sign Up Form -->
+                    <div class="col-lg-6">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4 p-lg-5">
+                                <div class="text-center mb-4">
+                                    <h2 class="fw-bold mb-2">Create Your Account</h2>
+                                    <p class="text-muted">Join thousands of users creating beautiful photo books</p>
+                                </div>
+
+                                <!-- Progress Indicator -->
+                                <div class="progress mb-4" style="height: 4px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 0%" id="signupProgress"></div>
+                                </div>
+
+                                <form id="signupForm" novalidate>
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label for="firstName" class="form-label fw-semibold">
+                                                <i class="fas fa-user me-1"></i>First Name
+                                            </label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your first name.
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="lastName" class="form-label fw-semibold">
+                                                <i class="fas fa-user me-1"></i>Last Name
+                                            </label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                            <div class="invalid-feedback">
+                                                Please enter your last name.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-semibold">
+                                            <i class="fas fa-envelope me-1"></i>Email Address
+                                        </label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label fw-semibold">
+                                            <i class="fas fa-lock me-1"></i>Password
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="password" required>
+                                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="password-strength mt-2">
+                                            <div class="progress" style="height: 3px;">
+                                                <div class="progress-bar" id="passwordStrength" style="width: 0%"></div>
+                                            </div>
+                                            <small class="text-muted" id="passwordFeedback">Password strength</small>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Password must be at least 8 characters long.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="form-label fw-semibold">
+                                            <i class="fas fa-lock me-1"></i>Confirm Password
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="confirmPassword" required>
+                                            <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Passwords do not match.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="terms" required>
+                                            <label class="form-check-label" for="terms">
+                                                I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                                            </label>
+                                            <div class="invalid-feedback">
+                                                You must agree before submitting.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="newsletter">
+                                            <label class="form-check-label" for="newsletter">
+                                                Send me updates about new features and templates
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary w-100 btn-lg mb-3" id="signupBtn">
+                                        <i class="fas fa-user-plus me-2"></i>Create Account
+                                    </button>
+
+                                    <div class="text-center">
+                                        <span class="text-muted">or</span>
+                                    </div>
+
+                                    <!-- Social Login Buttons -->
+                                    <div class="row g-2 mt-3">
+                                        <div class="col-6">
+                                            <button type="button" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-google me-2"></i>Google
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="button" class="btn btn-outline-secondary w-100 d-flex align-items-center justify-content-center">
+                                                <i class="fab fa-facebook-f me-2"></i>Facebook
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center mt-4">
+                                        <p class="mb-0">
+                                            Already have an account? 
+                                            <a href="login.html" class="text-primary fw-bold">Sign in here</a>
+                                        </p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefits Section -->
+                    <div class="col-lg-6">
+                        <div class="signup-benefits">
+                            <div class="text-center mb-4">
+                                <h3 class="fw-bold text-primary mb-3">Why Choose PhotoBook?</h3>
+                                <p class="lead text-muted">Join our community of creators</p>
+                            </div>
+
+                            <div class="benefits-list">
+                                <div class="benefit-item d-flex align-items-start mb-4">
+                                    <div class="benefit-icon bg-primary bg-gradient text-white rounded-circle p-3 me-3">
+                                        <i class="fas fa-magic"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-2">AI-Powered Design</h6>
+                                        <p class="text-muted mb-0">Our AI automatically arranges your photos beautifully, saving you hours of work.</p>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-item d-flex align-items-start mb-4">
+                                    <div class="benefit-icon bg-success bg-gradient text-white rounded-circle p-3 me-3">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-2">Unlimited Storage</h6>
+                                        <p class="text-muted mb-0">Store all your photos safely in the cloud with unlimited space.</p>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-item d-flex align-items-start mb-4">
+                                    <div class="benefit-icon bg-warning bg-gradient text-white rounded-circle p-3 me-3">
+                                        <i class="fas fa-shipping-fast"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-2">Fast Delivery</h6>
+                                        <p class="text-muted mb-0">Premium quality prints delivered to your door in 3-5 business days.</p>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-item d-flex align-items-start mb-4">
+                                    <div class="benefit-icon bg-info bg-gradient text-white rounded-circle p-3 me-3">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="fw-bold mb-2">Collaboration</h6>
+                                        <p class="text-muted mb-0">Invite family and friends to contribute photos to your albums.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Proof -->
+                            <div class="social-proof mt-5">
+                                <div class="text-center mb-3">
+                                    <div class="stars mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="fw-bold mb-1">Trusted by 50,000+ customers</p>
+                                    <p class="text-muted small">Join thousands of happy users creating beautiful memories</p>
+                                </div>
+
+                                <div class="testimonials">
+                                    <div class="testimonial-item bg-white p-3 rounded-3 shadow-sm mb-3">
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=SM" alt="User" class="rounded-circle me-3">
+                                            <div>
+                                                <p class="mb-1 fw-semibold">Sarah M.</p>
+                                                <p class="mb-0 text-muted small">"Amazing quality! My wedding album turned out perfect."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="testimonial-item bg-white p-3 rounded-3 shadow-sm">
+                                        <div class="d-flex align-items-center">
+                                            <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=JD" alt="User" class="rounded-circle me-3">
+                                            <div>
+                                                <p class="mb-1 fw-semibold">John D.</p>
+                                                <p class="mb-0 text-muted small">"So easy to use! Created our family vacation book in minutes."</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Guest Checkout Option -->
+                            <div class="guest-checkout mt-4 p-4 bg-light rounded-3">
+                                <div class="text-center">
+                                    <i class="fas fa-rocket fa-2x text-primary mb-3"></i>
+                                    <h6 class="fw-bold mb-2">Want to try first?</h6>
+                                    <p class="text-muted small mb-3">Create your first photo book without signing up</p>
+                                    <a href="new-album.html" class="btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-play me-1"></i>Start Creating
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enhanced signup functionality
+        const form = document.getElementById('signupForm');
+        const progressBar = document.getElementById('signupProgress');
+        const passwordInput = document.getElementById('password');
+        const confirmPasswordInput = document.getElementById('confirmPassword');
+        const passwordStrength = document.getElementById('passwordStrength');
+        const passwordFeedback = document.getElementById('passwordFeedback');
+        const togglePassword = document.getElementById('togglePassword');
+        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+        const signupBtn = document.getElementById('signupBtn');
+
+        let formProgress = 0;
+
+        // Password visibility toggle
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+        });
+
+        toggleConfirmPassword.addEventListener('click', function() {
+            const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            confirmPasswordInput.setAttribute('type', type);
+            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+        });
+
+        // Password strength checker
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            let feedback = '';
+
+            if (password.length >= 8) strength += 25;
+            if (/[a-z]/.test(password)) strength += 25;
+            if (/[A-Z]/.test(password)) strength += 25;
+            if (/[0-9]/.test(password)) strength += 25;
+
+            if (strength < 25) feedback = 'Very weak';
+            else if (strength < 50) feedback = 'Weak';
+            else if (strength < 75) feedback = 'Good';
+            else feedback = 'Strong';
+
+            return { strength, feedback };
+        }
+
+        passwordInput.addEventListener('input', function() {
+            const { strength, feedback } = checkPasswordStrength(this.value);
+            
+            passwordStrength.style.width = strength + '%';
+            
+            if (strength < 25) {
+                passwordStrength.className = 'progress-bar bg-danger';
+            } else if (strength < 50) {
+                passwordStrength.className = 'progress-bar bg-warning';
+            } else if (strength < 75) {
+                passwordStrength.className = 'progress-bar bg-info';
+            } else {
+                passwordStrength.className = 'progress-bar bg-success';
+            }
+            
+            passwordFeedback.textContent = feedback;
+            updateFormProgress();
+        });
+
+        // Form progress tracking
+        function updateFormProgress() {
+            const inputs = form.querySelectorAll('input[required]');
+            let filledInputs = 0;
+            
+            inputs.forEach(input => {
+                if (input.type === 'checkbox') {
+                    if (input.checked) filledInputs++;
+                } else {
+                    if (input.value.trim() !== '') filledInputs++;
+                }
+            });
+            
+            formProgress = (filledInputs / inputs.length) * 100;
+            progressBar.style.width = formProgress + '%';
+            
+            if (formProgress === 100) {
+                progressBar.className = 'progress-bar bg-success';
+            } else if (formProgress > 50) {
+                progressBar.className = 'progress-bar bg-info';
+            } else {
+                progressBar.className = 'progress-bar bg-warning';
+            }
+        }
+
+        // Real-time validation
+        form.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', updateFormProgress);
+            input.addEventListener('blur', validateField);
+        });
+
+        function validateField(event) {
+            const field = event.target;
+            const value = field.value.trim();
+            
+            // Remove existing validation classes
+            field.classList.remove('is-valid', 'is-invalid');
+            
+            // Validate based on field type
+            let isValid = true;
+            
+            switch(field.type) {
+                case 'email':
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    isValid = emailRegex.test(value);
+                    break;
+                case 'password':
+                    if (field.id === 'password') {
+                        isValid = value.length >= 8;
+                    } else if (field.id === 'confirmPassword') {
+                        const password = document.getElementById('password').value;
+                        isValid = value === password;
+                    }
+                    break;
+                case 'checkbox':
+                    isValid = field.checked;
+                    break;
+                default:
+                    isValid = value.length > 0;
+            }
+            
+            if (isValid) {
+                field.classList.add('is-valid');
+            } else {
+                field.classList.add('is-invalid');
+            }
+        }
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all fields
+            let isValid = true;
+            form.querySelectorAll('input[required]').forEach(input => {
+                input.dispatchEvent(new Event('blur'));
+                if (input.classList.contains('is-invalid')) {
+                    isValid = false;
+                }
+            });
+            
+            if (!isValid) {
+                showToast('Please fix the errors in the form.', 'danger');
+                return;
+            }
+            
+            // Show loading state
+            const originalText = signupBtn.innerHTML;
+            signupBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Account...';
+            signupBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                showToast('Account created successfully! Redirecting...', 'success');
+                
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 1500);
+            }, 2000);
+        });
+
+        // Toast notification system
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
+            toast.style.top = '20px';
+            toast.style.right = '20px';
+            toast.style.zIndex = '9999';
+            
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            `;
+            
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+            
+            toast.addEventListener('hidden.bs.toast', function() {
+                document.body.removeChild(toast);
+            });
+        }
+
+        // Social login handlers
+        document.querySelectorAll('.btn-outline-secondary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const provider = this.textContent.trim();
+                showToast(`Connecting to ${provider}...`, 'info');
+            });
+        });
+
+        // Initialize form
+        document.addEventListener('DOMContentLoaded', function() {
+            updateFormProgress();
+            
+            // Add entrance animations
+            const benefitItems = document.querySelectorAll('.benefit-item');
+            benefitItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(20px)';
+                
+                setTimeout(() => {
+                    item.style.transition = 'all 0.6s ease-out';
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+
+    <style>
+        /* Enhanced signup styles */
+        .signup-benefits {
+            padding: 2rem 0;
+        }
+        
+        .benefit-item {
+            transition: var(--transition);
+        }
+        
+        .benefit-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .benefit-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .benefit-item:hover .benefit-icon {
+            transform: scale(1.1);
+        }
+        
+        .testimonial-item {
+            transition: var(--transition);
+        }
+        
+        .testimonial-item:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md) !important;
+        }
+        
+        .guest-checkout {
+            transition: var(--transition);
+        }
+        
+        .guest-checkout:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .progress {
+            background-color: #e9ecef;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+        }
+        
+        .form-control.is-valid {
+            border-color: var(--success-color);
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+        }
+        
+        .form-control.is-invalid {
+            border-color: var(--danger-color);
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+        }
+        
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .stars {
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .signup-benefits {
+                padding: 1rem 0;
+            }
+            
+            .benefit-item:hover {
+                transform: none;
+            }
+        }
+    </style>
+</body>
+</html> 

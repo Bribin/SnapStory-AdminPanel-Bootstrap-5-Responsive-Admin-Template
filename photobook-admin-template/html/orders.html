@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
+    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-book-open me-2"></i>PhotoBook
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="orders.html">Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help.html">Help</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="dropdown me-3">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge bg-danger ms-1">2</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Order #12345 has been shipped</a></li>
+                            <li><a class="dropdown-item" href="#">Order #12346 is ready for review</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user me-2"></i>John Doe
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user-cog me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="orders.html"><i class="fas fa-shopping-bag me-2"></i>Orders</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <!-- Header -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6">
+                <h1 class="h3 mb-2">Orders & Tracking</h1>
+                <p class="text-muted mb-0">Track your photo book orders and view order history</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <a href="new-album.html" class="btn btn-primary">
+                    <i class="fas fa-plus me-2"></i>Create New Album
+                </a>
+            </div>
+        </div>
+
+        <!-- Order Stats -->
+        <div class="row g-3 mb-4">
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-primary bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-shopping-cart text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Total Orders</h6>
+                                <h4 class="mb-0">15</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-success bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-check text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Delivered</h6>
+                                <h4 class="mb-0">12</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-warning bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-shipping-fast text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">In Transit</h6>
+                                <h4 class="mb-0">2</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="bg-info bg-gradient rounded-circle p-3 me-3">
+                                <i class="fas fa-cog text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1">Processing</h6>
+                                <h4 class="mb-0">1</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="orderFilter" id="all-orders" checked>
+                    <label class="btn btn-outline-secondary" for="all-orders">All Orders</label>
+                    
+                    <input type="radio" class="btn-check" name="orderFilter" id="processing">
+                    <label class="btn btn-outline-secondary" for="processing">Processing</label>
+                    
+                    <input type="radio" class="btn-check" name="orderFilter" id="shipped">
+                    <label class="btn btn-outline-secondary" for="shipped">Shipped</label>
+                    
+                    <input type="radio" class="btn-check" name="orderFilter" id="delivered">
+                    <label class="btn btn-outline-secondary" for="delivered">Delivered</label>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search orders...">
+                    <button class="btn btn-outline-secondary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orders List -->
+        <div class="orders-list">
+            <!-- Order 1 -->
+            <div class="card border-0 shadow-sm mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/100x80/007bff/ffffff?text=Album" 
+                                 alt="Photo Book" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="mb-1">Summer 2024 Photo Book</h6>
+                            <p class="text-muted mb-1">Order #12345</p>
+                            <small class="text-muted">Placed on Dec 15, 2024</small>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="badge bg-success">Delivered</span>
+                            <div class="mt-1">
+                                <small class="text-muted">Delivered Dec 22, 2024</small>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="fw-bold">$37.97</div>
+                            <small class="text-muted">24 pages</small>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="btn-group-vertical">
+                                <button class="btn btn-sm btn-outline-primary" onclick="viewOrder('12345')">
+                                    <i class="fas fa-eye me-1"></i>View
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="downloadInvoice('12345')">
+                                    <i class="fas fa-download me-1"></i>Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 2 -->
+            <div class="card border-0 shadow-sm mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/100x80/28a745/ffffff?text=Wedding" 
+                                 alt="Wedding Album" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="mb-1">Wedding Album</h6>
+                            <p class="text-muted mb-1">Order #12346</p>
+                            <small class="text-muted">Placed on Dec 18, 2024</small>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="badge bg-warning">In Transit</span>
+                            <div class="mt-1">
+                                <small class="text-muted">Shipped Dec 20, 2024</small>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="fw-bold">$44.97</div>
+                            <small class="text-muted">36 pages</small>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="btn-group-vertical">
+                                <button class="btn btn-sm btn-outline-primary" onclick="viewOrder('12346')">
+                                    <i class="fas fa-eye me-1"></i>View
+                                </button>
+                                <button class="btn btn-sm btn-outline-info" onclick="trackOrder('12346')">
+                                    <i class="fas fa-truck me-1"></i>Track
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 3 -->
+            <div class="card border-0 shadow-sm mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/100x80/dc3545/ffffff?text=Family" 
+                                 alt="Family Album" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="mb-1">Family Portraits</h6>
+                            <p class="text-muted mb-1">Order #12347</p>
+                            <small class="text-muted">Placed on Dec 19, 2024</small>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="badge bg-info">Processing</span>
+                            <div class="mt-1">
+                                <small class="text-muted">Expected: Dec 25, 2024</small>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="fw-bold">$32.97</div>
+                            <small class="text-muted">18 pages</small>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="btn-group-vertical">
+                                <button class="btn btn-sm btn-outline-primary" onclick="viewOrder('12347')">
+                                    <i class="fas fa-eye me-1"></i>View
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="downloadInvoice('12347')">
+                                    <i class="fas fa-download me-1"></i>Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 4 -->
+            <div class="card border-0 shadow-sm mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/100x80/6f42c1/ffffff?text=Vacation" 
+                                 alt="Vacation Album" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="mb-1">Vacation 2023</h6>
+                            <p class="text-muted mb-1">Order #12348</p>
+                            <small class="text-muted">Placed on Dec 10, 2024</small>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="badge bg-success">Delivered</span>
+                            <div class="mt-1">
+                                <small class="text-muted">Delivered Dec 17, 2024</small>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="fw-bold">$39.97</div>
+                            <small class="text-muted">30 pages</small>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="btn-group-vertical">
+                                <button class="btn btn-sm btn-outline-primary" onclick="viewOrder('12348')">
+                                    <i class="fas fa-eye me-1"></i>View
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="downloadInvoice('12348')">
+                                    <i class="fas fa-download me-1"></i>Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order 5 -->
+            <div class="card border-0 shadow-sm mb-3">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/100x80/fd7e14/ffffff?text=Graduation" 
+                                 alt="Graduation Album" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-4">
+                            <h6 class="mb-1">Graduation</h6>
+                            <p class="text-muted mb-1">Order #12349</p>
+                            <small class="text-muted">Placed on Dec 5, 2024</small>
+                        </div>
+                        <div class="col-md-2">
+                            <span class="badge bg-success">Delivered</span>
+                            <div class="mt-1">
+                                <small class="text-muted">Delivered Dec 12, 2024</small>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="fw-bold">$34.97</div>
+                            <small class="text-muted">20 pages</small>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="btn-group-vertical">
+                                <button class="btn btn-sm btn-outline-primary" onclick="viewOrder('12349')">
+                                    <i class="fas fa-eye me-1"></i>View
+                                </button>
+                                <button class="btn btn-sm btn-outline-secondary" onclick="downloadInvoice('12349')">
+                                    <i class="fas fa-download me-1"></i>Invoice
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Load More -->
+        <div class="text-center mt-4">
+            <button class="btn btn-outline-primary">
+                <i class="fas fa-plus me-2"></i>Load More Orders
+            </button>
+        </div>
+    </div>
+
+    <!-- Order Details Modal -->
+    <div class="modal fade" id="orderModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Order Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="orderModalBody">
+                    <!-- Order details will be loaded here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="trackOrderBtn">Track Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Order data
+        const orders = {
+            '12345': {
+                title: 'Summer 2024 Photo Book',
+                status: 'Delivered',
+                date: 'Dec 15, 2024',
+                delivery: 'Dec 22, 2024',
+                price: '$37.97',
+                pages: '24 pages',
+                tracking: '1Z999AA1234567890',
+                address: 'John Doe, 123 Main St, New York, NY 10001'
+            },
+            '12346': {
+                title: 'Wedding Album',
+                status: 'In Transit',
+                date: 'Dec 18, 2024',
+                delivery: 'Dec 25, 2024',
+                price: '$44.97',
+                pages: '36 pages',
+                tracking: '1Z999AA1234567891',
+                address: 'John Doe, 123 Main St, New York, NY 10001'
+            },
+            '12347': {
+                title: 'Family Portraits',
+                status: 'Processing',
+                date: 'Dec 19, 2024',
+                delivery: 'Dec 28, 2024',
+                price: '$32.97',
+                pages: '18 pages',
+                tracking: null,
+                address: 'John Doe, 123 Main St, New York, NY 10001'
+            }
+        };
+
+        // View order details
+        function viewOrder(orderNumber) {
+            const order = orders[orderNumber];
+            if (!order) return;
+
+            const modalBody = document.getElementById('orderModalBody');
+            modalBody.innerHTML = `
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Order Information</h6>
+                        <p><strong>Order Number:</strong> #${orderNumber}</p>
+                        <p><strong>Product:</strong> ${order.title}</p>
+                        <p><strong>Order Date:</strong> ${order.date}</p>
+                        <p><strong>Status:</strong> <span class="badge bg-${getStatusColor(order.status)}">${order.status}</span></p>
+                        <p><strong>Expected Delivery:</strong> ${order.delivery}</p>
+                        <p><strong>Price:</strong> ${order.price}</p>
+                        <p><strong>Pages:</strong> ${order.pages}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Shipping Information</h6>
+                        <p><strong>Address:</strong><br>${order.address}</p>
+                        ${order.tracking ? `<p><strong>Tracking Number:</strong> ${order.tracking}</p>` : ''}
+                    </div>
+                </div>
+            `;
+
+            const trackBtn = document.getElementById('trackOrderBtn');
+            if (order.tracking) {
+                trackBtn.style.display = 'block';
+                trackBtn.onclick = () => trackOrder(orderNumber);
+            } else {
+                trackBtn.style.display = 'none';
+            }
+
+            const modal = new bootstrap.Modal(document.getElementById('orderModal'));
+            modal.show();
+        }
+
+        // Track order
+        function trackOrder(orderNumber) {
+            const order = orders[orderNumber];
+            if (order && order.tracking) {
+                // Open tracking in new window
+                window.open(`https://www.ups.com/track?tracknum=${order.tracking}`, '_blank');
+            }
+        }
+
+        // Download invoice
+        function downloadInvoice(orderNumber) {
+            alert(`Downloading invoice for order #${orderNumber}...`);
+        }
+
+        // Get status color
+        function getStatusColor(status) {
+            switch (status) {
+                case 'Delivered': return 'success';
+                case 'In Transit': return 'warning';
+                case 'Processing': return 'info';
+                default: return 'secondary';
+            }
+        }
+
+        // Filter functionality
+        document.querySelectorAll('input[name="orderFilter"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const filter = this.id;
+                console.log('Filter changed to:', filter);
+                // Add filter logic here
+            });
+        });
+    </script>
+</body>
+</html> 

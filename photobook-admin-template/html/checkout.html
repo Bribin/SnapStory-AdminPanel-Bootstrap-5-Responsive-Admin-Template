@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
+    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
+    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
+    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html">
+                <i class="fas fa-book-open me-2"></i>PhotoBook
+            </a>
+            <div class="navbar-nav ms-auto">
+                <a href="dashboard.html" class="nav-link">
+                    <i class="fas fa-arrow-left me-1"></i>Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <div class="row">
+            <!-- Checkout Form -->
+            <div class="col-lg-8">
+                <div class="checkout-form">
+                    <!-- Progress Indicator -->
+                    <div class="progress mb-4" style="height: 6px;">
+                        <div class="progress-bar" role="progressbar" style="width: 33%" id="checkoutProgress"></div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <h2 class="fw-bold mb-0">Checkout</h2>
+                        <span class="badge bg-primary ms-3">Secure Checkout</span>
+                    </div>
+
+                    <!-- Shipping Information -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-shipping-fast text-primary me-2"></i>Shipping Information
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="shippingForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">First Name *</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                        <div class="invalid-feedback">Please enter your first name.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">Last Name *</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                        <div class="invalid-feedback">Please enter your last name.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Email Address *</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Phone Number *</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                        <div class="invalid-feedback">Please enter your phone number.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label fw-semibold">Address *</label>
+                                        <input type="text" class="form-control" id="address" required>
+                                        <div class="invalid-feedback">Please enter your address.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label fw-semibold">City *</label>
+                                        <input type="text" class="form-control" id="city" required>
+                                        <div class="invalid-feedback">Please enter your city.</div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label fw-semibold">State *</label>
+                                        <select class="form-select" id="state" required>
+                                            <option value="">Select State</option>
+                                            <option value="CA">California</option>
+                                            <option value="NY">New York</option>
+                                            <option value="TX">Texas</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="IL">Illinois</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select your state.</div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label fw-semibold">ZIP Code *</label>
+                                        <input type="text" class="form-control" id="zipCode" required>
+                                        <div class="invalid-feedback">Please enter your ZIP code.</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Options -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-truck text-primary me-2"></i>Shipping Options
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="shipping-options">
+                                <div class="shipping-option selected" data-shipping="standard">
+                                    <div class="d-flex align-items-center">
+                                        <input type="radio" name="shipping" value="standard" checked>
+                                        <div class="ms-3 flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="fw-bold mb-1">Standard Shipping</h6>
+                                                    <p class="text-muted mb-0">3-5 business days</p>
+                                                </div>
+                                                <span class="fw-bold text-success">FREE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shipping-option" data-shipping="express">
+                                    <div class="d-flex align-items-center">
+                                        <input type="radio" name="shipping" value="express">
+                                        <div class="ms-3 flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="fw-bold mb-1">Express Shipping</h6>
+                                                    <p class="text-muted mb-0">1-2 business days</p>
+                                                </div>
+                                                <span class="fw-bold">$9.99</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shipping-option" data-shipping="overnight">
+                                    <div class="d-flex align-items-center">
+                                        <input type="radio" name="shipping" value="overnight">
+                                        <div class="ms-3 flex-grow-1">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <div>
+                                                    <h6 class="fw-bold mb-1">Overnight Shipping</h6>
+                                                    <p class="text-muted mb-0">Next business day</p>
+                                                </div>
+                                                <span class="fw-bold">$19.99</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Information -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-credit-card text-primary me-2"></i>Payment Information
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="paymentForm">
+                                <div class="payment-methods mb-3">
+                                    <div class="btn-group w-100" role="group">
+                                        <input type="radio" class="btn-check" name="paymentMethod" id="creditCard" checked>
+                                        <label class="btn btn-outline-primary" for="creditCard">
+                                            <i class="fas fa-credit-card me-2"></i>Credit Card
+                                        </label>
+                                        <input type="radio" class="btn-check" name="paymentMethod" id="paypal">
+                                        <label class="btn btn-outline-primary" for="paypal">
+                                            <i class="fab fa-paypal me-2"></i>PayPal
+                                        </label>
+                                        <input type="radio" class="btn-check" name="paymentMethod" id="applePay">
+                                        <label class="btn btn-outline-primary" for="applePay">
+                                            <i class="fab fa-apple-pay me-2"></i>Apple Pay
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="creditCardForm">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">Card Number *</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-credit-card"></i>
+                                                </span>
+                                            </div>
+                                            <div class="invalid-feedback">Please enter a valid card number.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">Expiry Date *</label>
+                                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                                            <div class="invalid-feedback">Please enter expiry date.</div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label fw-semibold">CVV *</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                                                <span class="input-group-text" data-bs-toggle="tooltip" title="3-digit security code">
+                                                    <i class="fas fa-question-circle"></i>
+                                                </span>
+                                            </div>
+                                            <div class="invalid-feedback">Please enter CVV.</div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="form-label fw-semibold">Name on Card *</label>
+                                            <input type="text" class="form-control" id="cardName" required>
+                                            <div class="invalid-feedback">Please enter name on card.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="paypalForm" style="display: none;">
+                                    <div class="text-center py-4">
+                                        <i class="fab fa-paypal fa-3x text-primary mb-3"></i>
+                                        <p class="text-muted">You'll be redirected to PayPal to complete your payment.</p>
+                                    </div>
+                                </div>
+
+                                <div id="applePayForm" style="display: none;">
+                                    <div class="text-center py-4">
+                                        <i class="fab fa-apple-pay fa-3x text-primary mb-3"></i>
+                                        <p class="text-muted">Complete your payment with Apple Pay.</p>
+                                        <button type="button" class="btn btn-primary">
+                                            <i class="fab fa-apple-pay me-2"></i>Pay with Apple Pay
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Promo Code -->
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h6 class="fw-bold mb-3">Have a Promo Code?</h6>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="promoCode" placeholder="Enter promo code">
+                                <button class="btn btn-outline-primary" type="button" id="applyPromo">
+                                    Apply
+                                </button>
+                            </div>
+                            <div id="promoMessage" class="mt-2" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary -->
+            <div class="col-lg-4">
+                <div class="order-summary sticky-top" style="top: 2rem;">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-header bg-white border-0 py-3">
+                            <h5 class="fw-bold mb-0">
+                                <i class="fas fa-shopping-cart text-primary me-2"></i>Order Summary
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Album Preview -->
+                            <div class="album-preview mb-3">
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/80x60/007bff/ffffff?text=Album" alt="Album" class="rounded me-3">
+                                    <div class="flex-grow-1">
+                                        <h6 class="fw-bold mb-1">Summer 2024 Album</h6>
+                                        <p class="text-muted small mb-0">20 pages • Hardcover</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Order Details -->
+                            <div class="order-details">
+                                <div class="order-item d-flex justify-content-between mb-2">
+                                    <span>Album</span>
+                                    <span>$39.99</span>
+                                </div>
+                                <div class="order-item d-flex justify-content-between mb-2">
+                                    <span>Shipping</span>
+                                    <span id="shippingCost">FREE</span>
+                                </div>
+                                <div class="order-item d-flex justify-content-between mb-2" id="promoDiscount" style="display: none;">
+                                    <span>Discount</span>
+                                    <span class="text-success">-$5.00</span>
+                                </div>
+                                <hr>
+                                <div class="order-item d-flex justify-content-between fw-bold">
+                                    <span>Total</span>
+                                    <span id="orderTotal">$39.99</span>
+                                </div>
+                            </div>
+
+                            <!-- Security Badges -->
+                            <div class="security-badges mt-3">
+                                <div class="d-flex align-items-center justify-content-center gap-3">
+                                    <div class="security-badge">
+                                        <i class="fas fa-lock text-success"></i>
+                                        <small class="d-block">Secure</small>
+                                    </div>
+                                    <div class="security-badge">
+                                        <i class="fas fa-shield-alt text-primary"></i>
+                                        <small class="d-block">Protected</small>
+                                    </div>
+                                    <div class="security-badge">
+                                        <i class="fas fa-credit-card text-info"></i>
+                                        <small class="d-block">Encrypted</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Place Order Button -->
+                            <button class="btn btn-primary btn-lg w-100 mt-4" id="placeOrderBtn">
+                                <i class="fas fa-lock me-2"></i>Place Order - $39.99
+                            </button>
+
+                            <p class="text-muted small text-center mt-3">
+                                By placing your order, you agree to our 
+                                <a href="#" class="text-primary">Terms of Service</a> and 
+                                <a href="#" class="text-primary">Privacy Policy</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Customer Support -->
+                    <div class="card border-0 shadow-sm mt-3">
+                        <div class="card-body text-center">
+                            <i class="fas fa-headset fa-2x text-primary mb-2"></i>
+                            <h6 class="fw-bold">Need Help?</h6>
+                            <p class="text-muted small mb-2">Our support team is here to help</p>
+                            <a href="help.html" class="btn btn-outline-primary btn-sm">
+                                <i class="fas fa-comments me-1"></i>Live Chat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Modal -->
+    <div class="modal fade" id="orderConfirmationModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div class="success-animation mb-4">
+                        <i class="fas fa-check-circle fa-4x text-success"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Order Placed Successfully!</h3>
+                    <p class="text-muted mb-4">Your order has been confirmed and is being processed.</p>
+                    
+                    <div class="order-details bg-light p-3 rounded mb-4">
+                        <div class="row text-start">
+                            <div class="col-md-6">
+                                <p class="mb-1"><strong>Order Number:</strong></p>
+                                <p class="text-muted">#PB-2024-001</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="mb-1"><strong>Estimated Delivery:</strong></p>
+                                <p class="text-muted">3-5 business days</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex gap-2 justify-content-center">
+                        <a href="order-confirmation.html" class="btn btn-primary">
+                            <i class="fas fa-eye me-2"></i>View Order Details
+                        </a>
+                        <a href="dashboard.html" class="btn btn-outline-primary">
+                            <i class="fas fa-home me-2"></i>Back to Dashboard
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Enhanced checkout functionality
+        let currentStep = 1;
+        let orderData = {
+            shipping: 'standard',
+            promoCode: null,
+            subtotal: 39.99,
+            shippingCost: 0,
+            discount: 0,
+            total: 39.99
+        };
+
+        // Form validation
+        function validateForm(formId) {
+            const form = document.getElementById(formId);
+            const inputs = form.querySelectorAll('input[required], select[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                input.classList.remove('is-valid', 'is-invalid');
+                
+                if (!input.value.trim()) {
+                    input.classList.add('is-invalid');
+                    isValid = false;
+                } else {
+                    input.classList.add('is-valid');
+                }
+            });
+
+            return isValid;
+        }
+
+        // Real-time validation
+        document.querySelectorAll('input, select').forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+        });
+
+        function validateField(field) {
+            field.classList.remove('is-valid', 'is-invalid');
+            
+            if (!field.value.trim()) {
+                field.classList.add('is-invalid');
+                return false;
+            }
+            
+            // Specific validation rules
+            if (field.type === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(field.value)) {
+                    field.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            
+            if (field.id === 'cardNumber') {
+                const cardRegex = /^\d{4}\s\d{4}\s\d{4}\s\d{4}$/;
+                if (!cardRegex.test(field.value)) {
+                    field.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            
+            if (field.id === 'expiryDate') {
+                const expiryRegex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+                if (!expiryRegex.test(field.value)) {
+                    field.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            
+            if (field.id === 'cvv') {
+                const cvvRegex = /^\d{3,4}$/;
+                if (!cvvRegex.test(field.value)) {
+                    field.classList.add('is-invalid');
+                    return false;
+                }
+            }
+            
+            field.classList.add('is-valid');
+            return true;
+        }
+
+        // Shipping options
+        document.querySelectorAll('.shipping-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.shipping-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                const shippingType = this.dataset.shipping;
+                updateShippingCost(shippingType);
+            });
+        });
+
+        function updateShippingCost(shippingType) {
+            let cost = 0;
+            switch(shippingType) {
+                case 'standard':
+                    cost = 0;
+                    break;
+                case 'express':
+                    cost = 9.99;
+                    break;
+                case 'overnight':
+                    cost = 19.99;
+                    break;
+            }
+            
+            orderData.shipping = shippingType;
+            orderData.shippingCost = cost;
+            updateOrderSummary();
+        }
+
+        // Payment method toggle
+        document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const method = this.id;
+                showPaymentForm(method);
+            });
+        });
+
+        function showPaymentForm(method) {
+            document.getElementById('creditCardForm').style.display = 'none';
+            document.getElementById('paypalForm').style.display = 'none';
+            document.getElementById('applePayForm').style.display = 'none';
+            
+            switch(method) {
+                case 'creditCard':
+                    document.getElementById('creditCardForm').style.display = 'block';
+                    break;
+                case 'paypal':
+                    document.getElementById('paypalForm').style.display = 'block';
+                    break;
+                case 'applePay':
+                    document.getElementById('applePayForm').style.display = 'block';
+                    break;
+            }
+        }
+
+        // Promo code
+        document.getElementById('applyPromo').addEventListener('click', function() {
+            const promoCode = document.getElementById('promoCode').value.trim();
+            const messageDiv = document.getElementById('promoMessage');
+            
+            if (!promoCode) {
+                showPromoMessage('Please enter a promo code.', 'warning');
+                return;
+            }
+            
+            // Simulate promo code validation
+            if (promoCode.toUpperCase() === 'SAVE10') {
+                orderData.promoCode = promoCode;
+                orderData.discount = 5.00;
+                showPromoMessage('Promo code applied! $5.00 discount.', 'success');
+                document.getElementById('promoDiscount').style.display = 'block';
+            } else {
+                showPromoMessage('Invalid promo code.', 'danger');
+            }
+            
+            updateOrderSummary();
+        });
+
+        function showPromoMessage(message, type) {
+            const messageDiv = document.getElementById('promoMessage');
+            messageDiv.className = `alert alert-${type} mt-2`;
+            messageDiv.textContent = message;
+            messageDiv.style.display = 'block';
+        }
+
+        // Update order summary
+        function updateOrderSummary() {
+            const shippingCost = orderData.shippingCost;
+            const discount = orderData.discount;
+            const total = orderData.subtotal + shippingCost - discount;
+            
+            document.getElementById('shippingCost').textContent = shippingCost === 0 ? 'FREE' : `$${shippingCost.toFixed(2)}`;
+            document.getElementById('orderTotal').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('placeOrderBtn').innerHTML = `<i class="fas fa-lock me-2"></i>Place Order - $${total.toFixed(2)}`;
+            
+            orderData.total = total;
+        }
+
+        // Place order
+        document.getElementById('placeOrderBtn').addEventListener('click', function() {
+            if (!validateForm('shippingForm') || !validateForm('paymentForm')) {
+                showToast('Please fill in all required fields correctly.', 'warning');
+                return;
+            }
+            
+            // Show loading state
+            const btn = this;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Processing...';
+            btn.disabled = true;
+            
+            // Simulate order processing
+            setTimeout(() => {
+                const modal = new bootstrap.Modal(document.getElementById('orderConfirmationModal'));
+                modal.show();
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }, 2000);
+        });
+
+        // Card number formatting
+        document.getElementById('cardNumber').addEventListener('input', function() {
+            let value = this.value.replace(/\s/g, '').replace(/\D/g, '');
+            value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+            this.value = value.substring(0, 19);
+        });
+
+        // Expiry date formatting
+        document.getElementById('expiryDate').addEventListener('input', function() {
+            let value = this.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            this.value = value.substring(0, 5);
+        });
+
+        // CVV formatting
+        document.getElementById('cvv').addEventListener('input', function() {
+            this.value = this.value.replace(/\D/g, '').substring(0, 4);
+        });
+
+        // Toast notification system
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
+            toast.style.top = '20px';
+            toast.style.right = '20px';
+            toast.style.zIndex = '9999';
+            
+            toast.innerHTML = `
+                <div class="d-flex">
+                    <div class="toast-body">
+                        ${message}
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+                </div>
+            `;
+            
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast);
+            bsToast.show();
+            
+            toast.addEventListener('hidden.bs.toast', function() {
+                document.body.removeChild(toast);
+            });
+        }
+
+        // Initialize checkout
+        document.addEventListener('DOMContentLoaded', function() {
+            updateOrderSummary();
+            
+            // Add entrance animations
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease-out';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+
+    <style>
+        /* Enhanced checkout styles */
+        .shipping-option {
+            border: 2px solid #e9ecef;
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .shipping-option:hover {
+            border-color: var(--primary-color);
+            background: rgba(0, 123, 255, 0.05);
+        }
+        
+        .shipping-option.selected {
+            border-color: var(--primary-color);
+            background: rgba(0, 123, 255, 0.1);
+        }
+        
+        .order-item {
+            transition: var(--transition);
+        }
+        
+        .order-item:hover {
+            background: rgba(0, 123, 255, 0.05);
+            border-radius: var(--border-radius);
+            padding: 0.25rem;
+            margin: -0.25rem;
+        }
+        
+        .security-badge {
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .security-badge:hover {
+            transform: scale(1.1);
+        }
+        
+        .album-preview {
+            transition: var(--transition);
+        }
+        
+        .album-preview:hover {
+            transform: scale(1.02);
+        }
+        
+        .success-animation {
+            animation: bounceIn 0.6s ease-out;
+        }
+        
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+        }
+        
+        .form-control.is-valid {
+            border-color: var(--success-color);
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
+        }
+        
+        .form-control.is-invalid {
+            border-color: var(--danger-color);
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
+        }
+        
+        .btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+        }
+        
+        .modal-content {
+            border: none;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        @media (max-width: 768px) {
+            .order-summary {
+                position: static !important;
+                margin-top: 2rem;
+            }
+        }
+    </style>
+</body>
+</html> 
