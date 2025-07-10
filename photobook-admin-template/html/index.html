@@ -13,23 +13,48 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
     <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
     <meta property="og:url" content="https://yourdomain.com/">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
     <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
+    <meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        footer a.text-decoration-none {
+            position: relative;
+            transition: color 0.2s;
+        }
+        footer a.text-decoration-none::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: #9381ff;
+            transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        footer a.text-decoration-none:hover::after,
+        footer a.text-decoration-none:focus::after {
+            width: 100%;
+        }
+        footer a.text-decoration-none:hover, 
+        footer a.text-decoration-none:focus {
+            color: #9381ff !important;
+            text-decoration: none !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html">
-                <i class="fas fa-book-open me-2"></i>PhotoBook
+                <i class="fas fa-book-open me-2"></i>SnapStory
             </a>
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -37,16 +62,19 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="dashboard.html"><i class="fas fa-home me-1"></i>Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#templates">Templates</a>
+                        <a class="nav-link" href="templates.html"><i class="fas fa-th-large me-1"></i>Templates</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pricing">Pricing</a>
+                        <a class="nav-link" href="pricing.html"><i class="fas fa-tags me-1"></i>Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="help.html">Help</a>
+                        <a class="nav-link" href="orders.html"><i class="fas fa-shopping-bag me-1"></i>Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="help.html"><i class="fas fa-question-circle me-1"></i>Help</a>
                     </li>
                 </ul>
                 <div class="d-flex align-items-center gap-2">
@@ -58,29 +86,40 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section text-white py-5">
-        <div class="container">
-            <div class="row align-items-center min-vh-100">
+    <section class="hero-section text-white py-5 position-relative">
+        <!-- Decorative SVG Overlay -->
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="pointer-events:none;z-index:1;opacity:0.3;">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse">
+                        <circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#grain)"/>
+            </svg>
+        </div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="row align-items-center ">
                 <div class="col-lg-6">
                     <div class="hero-content">
-                        <span class="badge bg-light text-primary mb-3 px-3 py-2">✨ Trusted by 50,000+ customers</span>
-                        <h1 class="display-4 fw-bold mb-4 animate-fade-in">
+                        <span class="badge bg-primary text-primary mb-3 px-3 py-2">✨ Trusted by 50,000+ customers</span>
+                        <h1 class="display-4 text-dark  fw-bold mb-4 animate-fade-in">
                             Create Beautiful Photo Books in 
-                            <span class="text-warning">Minutes</span>
+                            <span class="text-primary">Minutes</span>
                         </h1>
-                        <p class="lead mb-4 text-light opacity-75">
+                        <p class="lead mb-4 text-dark opacity-75">
                             Transform your memories into stunning photo books with our professional templates and AI-powered editor. 
                             High-quality prints delivered to your door.
                         </p>
                         <div class="d-flex flex-wrap gap-3 mb-4">
-                            <a href="signup.html" class="btn btn-light btn-lg px-4 d-flex align-items-center">
+                            <a href="signup.html" class="btn btn-primary btn-lg px-4 d-flex align-items-center">
                                 <i class="fas fa-play me-2"></i>Start Creating Free
                             </a>
-                            <a href="#demo" class="btn btn-outline-light btn-lg px-4 d-flex align-items-center">
+                            <a href="#demo" class="btn btn-outline-dark btn-lg px-4 d-flex align-items-center">
                                 <i class="fas fa-eye me-2"></i>View Demo
                             </a>
                         </div>
-                        <div class="hero-stats d-flex gap-4 text-light">
+                        <div class="hero-stats d-flex gap-4 text-dark">
                             <div class="stat-item">
                                 <div class="fw-bold fs-4">24hr</div>
                                 <small class="opacity-75">Fastest Delivery</small>
@@ -99,15 +138,14 @@
                 <div class="col-lg-6">
                     <div class="hero-image text-center position-relative">
                         <div class="floating-card card-1">
-                            <i class="fas fa-star text-warning"></i>
-                            <small>Amazing quality!</small>
+                            <i class="fas fa-star text-dark"></i>
+                            <small class="text-dark">Amazing quality!</small>
                         </div>
                         <div class="floating-card card-2">
                             <i class="fas fa-heart text-danger"></i>
-                            <small>Love it!</small>
+                            <small class="text-dark">Love it!</small>
                         </div>
-                        <img src="https://via.placeholder.com/600x400/007bff/ffffff?text=PhotoBook+Demo" 
-                             alt="PhotoBook Preview" class="img-fluid rounded-3 shadow-lg animate-float">
+                        <img src="../assets/img/placeholder-hero-600x400.png" alt="SnapStory Preview" class="img-fluid rounded-3 shadow-lg animate-float">
                     </div>
                 </div>
             </div>
@@ -119,7 +157,7 @@
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-lg-8 mx-auto">
-                    <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Why Choose PhotoBook?</span>
+                    <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Why Choose SnapStory?</span>
                     <h2 class="display-5 fw-bold mb-3">Everything you need to create professional photo books</h2>
                     <p class="lead text-muted">From AI-powered editing to premium printing, we've got you covered</p>
                 </div>
@@ -211,7 +249,7 @@
                             <div class="carousel-item active">
                                 <div class="testimonial-card text-center">
                                     <div class="testimonial-avatar mb-3">
-                                        <img src="https://via.placeholder.com/80x80/007bff/ffffff?text=SM" alt="Sarah M." class="rounded-circle">
+                                        <img src="../assets/img/placeholder-user-1-80x80.png" alt="Sarah M." class="rounded-circle">
                                     </div>
                                     <div class="stars mb-3">
                                         <i class="fas fa-star text-warning"></i>
@@ -228,7 +266,7 @@
                             <div class="carousel-item">
                                 <div class="testimonial-card text-center">
                                     <div class="testimonial-avatar mb-3">
-                                        <img src="https://via.placeholder.com/80x80/28a745/ffffff?text=JD" alt="John D." class="rounded-circle">
+                                        <img src="../assets/img/placeholder-user-2-80x80.png" alt="John D." class="rounded-circle">
                                     </div>
                                     <div class="stars mb-3">
                                         <i class="fas fa-star text-warning"></i>
@@ -245,7 +283,7 @@
                             <div class="carousel-item">
                                 <div class="testimonial-card text-center">
                                     <div class="testimonial-avatar mb-3">
-                                        <img src="https://via.placeholder.com/80x80/dc3545/ffffff?text=ML" alt="Maria L." class="rounded-circle">
+                                        <img src="../assets/img/placeholder-user-3-80x80.png" alt="Maria L." class="rounded-circle">
                                     </div>
                                     <div class="stars mb-3">
                                         <i class="fas fa-star text-warning"></i>
@@ -294,9 +332,9 @@
             <div class="row g-4">
                 <div class="col-lg-4">
                     <h5 class="fw-bold mb-3 d-flex align-items-center">
-                        <i class="fas fa-book-open me-2"></i>PhotoBook
+                        <i class="fas fa-book-open me-2"></i>SnapStory
                     </h5>
-                    <p class="text-muted mb-3">Create beautiful photo books online with our professional templates and easy-to-use editor.</p>
+                    <p class="mb-3">Create beautiful photo books online with our professional templates and easy-to-use editor.</p>
                     <div class="social-links">
                         <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
@@ -307,47 +345,47 @@
                 <div class="col-lg-2 col-md-6">
                     <h6 class="fw-bold mb-3">Product</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted text-decoration-none">Templates</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Features</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Samples</a></li>
+                        <li><a href="templates.html" class="text-decoration-none">Templates</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li><a href="features.html" class="text-decoration-none">Features</a></li>
+                        <li><a href="samples.html" class="text-decoration-none">Samples</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <h6 class="fw-bold mb-3">Support</h6>
                     <ul class="list-unstyled">
-                        <li><a href="help.html" class="text-muted text-decoration-none">Help Center</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Contact Us</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Live Chat</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+                        <li><a href="help.html" class="text-decoration-none">Help Center</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+                        <li><a href="live-chat.html" class="text-decoration-none">Live Chat</a></li>
+                        <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <h6 class="fw-bold mb-3">Company</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted text-decoration-none">About</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Blog</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Careers</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Press</a></li>
+                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
+                        <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        <li><a href="press.html" class="text-decoration-none">Press</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 col-md-6">
                     <h6 class="fw-bold mb-3">Legal</h6>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted text-decoration-none">Privacy</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Terms</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Cookies</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">GDPR</a></li>
+                        <li><a href="privacy.html" class="text-decoration-none">Privacy</a></li>
+                        <li><a href="terms.html" class="text-decoration-none">Terms</a></li>
+                        <li><a href="cookies.html" class="text-decoration-none">Cookies</a></li>
+                        <li><a href="gdpr.html" class="text-decoration-none">GDPR</a></li>
                     </ul>
                 </div>
             </div>
             <hr class="my-4">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p class="mb-0 text-muted">&copy; 2024 PhotoBook. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2024 SnapStory. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <img src="https://via.placeholder.com/200x30/ffffff/000000?text=Secure+Payment" alt="Secure Payment" class="img-fluid">
+                    <img src="../assets/img/placeholder-secure-payment-200x30.png" alt="Secure Payment" class="img-fluid">
                 </div>
             </div>
         </div>
