@@ -1,13 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - PhotoBook</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>SnapStory – Complete Photobook Web App Admin & Frontend Template</title>
+    <meta name="description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. It includes 14 core admin pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—plus 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation), along with modern frontend pages to launch your photobook business quickly. Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow with pixel-perfect consistency across devices.">
+    <meta name="keywords"
+        content="photobook app, frontend, backend, admin panel, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app template, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+    <meta property="og:description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+    <meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
+    <meta property="og:url" content="https://yourdomain.com/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+    <meta name="twitter:description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+    <meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
+
 </head>
+
 <body class="bg-light">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
@@ -38,68 +70,78 @@
                 </ul>
                 <div class="d-flex align-items-center gap-2">
                     <div class="dropdown">
-                        <button class="btn btn-outline-secondary dropdown-toggle position-relative" type="button" data-bs-toggle="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle position-relative" type="button"
+                            data-bs-toggle="dropdown">
                             <i class="fas fa-bell"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 3
                                 <span class="visually-hidden">unread notifications</span>
                             </span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                            <li><h6 class="dropdown-header">Notifications</h6></li>
+                            <li>
+                                <h6 class="dropdown-header">Notifications</h6>
+                            </li>
                             <li><a class="dropdown-item" href="#">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-check-circle text-success"></i>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-check-circle text-success"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <div class="fw-bold">Album Ready</div>
+                                            <small class="text-muted">"Summer 2024" is ready for review</small>
+                                        </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <div class="fw-bold">Album Ready</div>
-                                        <small class="text-muted">"Summer 2024" is ready for review</small>
-                                    </div>
-                                </div>
-                            </a></li>
+                                </a></li>
                             <li><a class="dropdown-item" href="#">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-shipping-fast text-primary"></i>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-shipping-fast text-primary"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <div class="fw-bold">Order Shipped</div>
+                                            <small class="text-muted">Order #12345 has been shipped</small>
+                                        </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <div class="fw-bold">Order Shipped</div>
-                                        <small class="text-muted">Order #12345 has been shipped</small>
-                                    </div>
-                                </div>
-                            </a></li>
+                                </a></li>
                             <li><a class="dropdown-item" href="#">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <i class="fas fa-star text-warning"></i>
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <i class="fas fa-star text-warning"></i>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <div class="fw-bold">New Templates</div>
+                                            <small class="text-muted">50+ new templates available</small>
+                                        </div>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <div class="fw-bold">New Templates</div>
-                                        <small class="text-muted">50+ new templates available</small>
-                                    </div>
-                                </div>
-                            </a></li>
-                            <li><hr class="dropdown-divider"></li>
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item text-center" href="#">View all notifications</a></li>
                         </ul>
                     </div>
                     <div class="dropdown">
-                        <button class="btn btn-outline-primary dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown">
-                            <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=JD" alt="Profile" class="rounded-circle me-2" width="24" height="24">
+                        <button class="btn btn-outline-primary dropdown-toggle d-flex align-items-center" type="button"
+                            data-bs-toggle="dropdown">
+                            <img src="https://via.placeholder.com/32x32/007bff/ffffff?text=JD" alt="Profile"
+                                class="rounded-circle me-2" width="24" height="24">
                             <span>John Doe</span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="profile.html">
-                                <i class="fas fa-user-cog me-2"></i>Profile & Settings
-                            </a></li>
+                                    <i class="fas fa-user-cog me-2"></i>Profile & Settings
+                                </a></li>
                             <li><a class="dropdown-item" href="orders.html">
-                                <i class="fas fa-shopping-bag me-2"></i>My Orders
-                            </a></li>
-                            <li><hr class="dropdown-divider"></li>
+                                    <i class="fas fa-shopping-bag me-2"></i>My Orders
+                                </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                             <li><a class="dropdown-item" href="index.html">
-                                <i class="fas fa-sign-out-alt me-2"></i>Logout
-                            </a></li>
+                                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                </a></li>
                         </ul>
                     </div>
                 </div>
@@ -118,7 +160,7 @@
                 <p class="text-muted mb-0">Ready to create your next beautiful photo book?</p>
             </div>
             <div class="col-md-6 text-md-end">
-                <a href="new-album.html" class="btn btn-primary btn-lg d-inline-flex align-items-center">
+                <a href="new-album-upload.html" class="btn btn-primary btn-lg d-inline-flex align-items-center">
                     <i class="fas fa-plus me-2"></i>Create New Album
                 </a>
             </div>
@@ -208,17 +250,17 @@
                     <label class="btn btn-outline-secondary" for="all">
                         <i class="fas fa-th-large me-1"></i>All
                     </label>
-                    
+
                     <input type="radio" class="btn-check" name="filter" id="draft">
                     <label class="btn btn-outline-secondary" for="draft">
                         <i class="fas fa-edit me-1"></i>Draft
                     </label>
-                    
+
                     <input type="radio" class="btn-check" name="filter" id="review">
                     <label class="btn btn-outline-secondary" for="review">
                         <i class="fas fa-eye me-1"></i>In Review
                     </label>
-                    
+
                     <input type="radio" class="btn-check" name="filter" id="completed">
                     <label class="btn btn-outline-secondary" for="completed">
                         <i class="fas fa-check me-1"></i>Completed
@@ -230,7 +272,8 @@
                     <span class="input-group-text bg-white border-end-0">
                         <i class="fas fa-search text-muted"></i>
                     </span>
-                    <input type="text" class="form-control border-start-0" placeholder="Search albums..." id="searchInput">
+                    <input type="text" class="form-control border-start-0" placeholder="Search albums..."
+                        id="searchInput">
                 </div>
             </div>
         </div>
@@ -241,7 +284,8 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card album-card border-0 shadow-sm h-100">
                     <div class="position-relative">
-                        <img src="https://via.placeholder.com/400x250/007bff/ffffff?text=Summer+2024" class="album-thumbnail" alt="Summer 2024">
+                        <img src="../assets/img/summer-2025.png" 
+                            class="album-thumbnail img-fluid w-100 object-fit-cover" alt="Summer 2024" >
                         <div class="album-overlay">
                             <div class="album-actions">
                                 <button class="btn btn-light btn-sm" title="Preview">
@@ -270,18 +314,23 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i>Download</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fas fa-download me-2"></i>Download</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#"><i
+                                                class="fas fa-trash me-2"></i>Delete</a></li>
                                 </ul>
                             </div>
                         </div>
                         <p class="card-text text-muted small mb-3">
                             <i class="fas fa-image me-1"></i>24 pages • Created 2 days ago
                         </p>
-                        <div class="progress mb-3" style="height: 4px;">
-                            <div class="progress-bar bg-success" style="width: 85%"></div>
+                        <div class="progress mb-3" class="migrated-inline-style-8">
+                            <div class="progress-bar bg-success" class="migrated-inline-style-9"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-muted">85% complete</small>
@@ -302,7 +351,8 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card album-card border-0 shadow-sm h-100">
                     <div class="position-relative">
-                        <img src="https://via.placeholder.com/400x250/28a745/ffffff?text=Wedding+Album" class="album-thumbnail" alt="Wedding Album">
+                        <img src="../assets/img/wedding-album.png" 
+                            class="album-thumbnail img-fluid w-100 object-fit-cover" alt="Wedding Album" >
                         <div class="album-overlay">
                             <div class="album-actions">
                                 <button class="btn btn-light btn-sm" title="Preview">
@@ -331,18 +381,23 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i>Download</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fas fa-download me-2"></i>Download</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#"><i
+                                                class="fas fa-trash me-2"></i>Delete</a></li>
                                 </ul>
                             </div>
                         </div>
                         <p class="card-text text-muted small mb-3">
                             <i class="fas fa-image me-1"></i>36 pages • Created 1 week ago
                         </p>
-                        <div class="progress mb-3" style="height: 4px;">
-                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        <div class="progress mb-3" class="migrated-inline-style-10">
+                            <div class="progress-bar bg-success" class="migrated-inline-style-11"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-success">Ready to order</small>
@@ -363,7 +418,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card album-card border-0 shadow-sm h-100">
                     <div class="position-relative">
-                        <img src="https://via.placeholder.com/400x250/dc3545/ffffff?text=Family+Portraits" class="album-thumbnail" alt="Family Portraits">
+
+                            <img src="../assets/img/family-portraits.png" 
+                            class="album-thumbnail img-fluid w-100 object-fit-cover" alt="Family Portraits" >
+                            
                         <div class="album-overlay">
                             <div class="album-actions">
                                 <button class="btn btn-light btn-sm" title="Preview">
@@ -392,18 +450,23 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i>Download</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fas fa-download me-2"></i>Download</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#"><i
+                                                class="fas fa-trash me-2"></i>Delete</a></li>
                                 </ul>
                             </div>
                         </div>
                         <p class="card-text text-muted small mb-3">
                             <i class="fas fa-image me-1"></i>18 pages • Created 3 days ago
                         </p>
-                        <div class="progress mb-3" style="height: 4px;">
-                            <div class="progress-bar bg-secondary" style="width: 25%"></div>
+                        <div class="progress mb-3" class="migrated-inline-style-12">
+                            <div class="progress-bar bg-secondary" class="migrated-inline-style-13"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-muted">25% complete</small>
@@ -424,7 +487,9 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card album-card border-0 shadow-sm h-100">
                     <div class="position-relative">
-                        <img src="https://via.placeholder.com/400x250/6f42c1/ffffff?text=Vacation+2023" class="album-thumbnail" alt="Vacation 2023">
+                        <img src="../assets/img/vacation-2023.png" 
+                        class="album-thumbnail img-fluid w-100 object-fit-cover" alt="Vacation 2023" >
+                       
                         <div class="album-overlay">
                             <div class="album-actions">
                                 <button class="btn btn-light btn-sm" title="Preview">
@@ -453,18 +518,23 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i>Download</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fas fa-download me-2"></i>Download</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#"><i
+                                                class="fas fa-trash me-2"></i>Delete</a></li>
                                 </ul>
                             </div>
                         </div>
                         <p class="card-text text-muted small mb-3">
                             <i class="fas fa-image me-1"></i>30 pages • Created 2 weeks ago
                         </p>
-                        <div class="progress mb-3" style="height: 4px;">
-                            <div class="progress-bar bg-info" style="width: 100%"></div>
+                        <div class="progress mb-3" class="migrated-inline-style-14">
+                            <div class="progress-bar bg-info" class="migrated-inline-style-15"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-info">In transit</small>
@@ -485,7 +555,9 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card album-card border-0 shadow-sm h-100">
                     <div class="position-relative">
-                        <img src="https://via.placeholder.com/400x250/fd7e14/ffffff?text=Graduation" class="album-thumbnail" alt="Graduation">
+                      
+                            <img src="../assets/img/graduation.png" 
+                            class="album-thumbnail img-fluid w-100 object-fit-cover" alt="Graduation" >
                         <div class="album-overlay">
                             <div class="album-actions">
                                 <button class="btn btn-light btn-sm" title="Preview">
@@ -514,18 +586,23 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i>Download</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fas fa-download me-2"></i>Download</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#"><i
+                                                class="fas fa-trash me-2"></i>Delete</a></li>
                                 </ul>
                             </div>
                         </div>
                         <p class="card-text text-muted small mb-3">
                             <i class="fas fa-image me-1"></i>20 pages • Created 1 month ago
                         </p>
-                        <div class="progress mb-3" style="height: 4px;">
-                            <div class="progress-bar bg-success" style="width: 100%"></div>
+                        <div class="progress mb-3" class="migrated-inline-style-16">
+                            <div class="progress-bar bg-success" class="migrated-inline-style-17"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-success">Ready to order</small>
@@ -546,7 +623,9 @@
             <div class="col-lg-4 col-md-6">
                 <div class="card album-card border-0 shadow-sm h-100">
                     <div class="position-relative">
-                        <img src="https://via.placeholder.com/400x250/20c997/ffffff?text=Baby+Photos" class="album-thumbnail" alt="Baby Photos">
+                       
+                            <img src="../assets/img/baby-photos.png" 
+                            class="album-thumbnail img-fluid w-100 object-fit-cover" alt="Baby Photos" >
                         <div class="album-overlay">
                             <div class="album-actions">
                                 <button class="btn btn-light btn-sm" title="Preview">
@@ -575,18 +654,23 @@
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i>Edit</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="fas fa-download me-2"></i>Download</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item text-danger" href="#"><i class="fas fa-trash me-2"></i>Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fas fa-copy me-2"></i>Duplicate</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fas fa-download me-2"></i>Download</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item text-danger" href="#"><i
+                                                class="fas fa-trash me-2"></i>Delete</a></li>
                                 </ul>
                             </div>
                         </div>
                         <p class="card-text text-muted small mb-3">
                             <i class="fas fa-image me-1"></i>16 pages • Created 5 days ago
                         </p>
-                        <div class="progress mb-3" style="height: 4px;">
-                            <div class="progress-bar bg-secondary" style="width: 10%"></div>
+                        <div class="progress mb-3" class="migrated-inline-style-18">
+                            <div class="progress-bar bg-secondary" class="migrated-inline-style-19"></div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center">
                             <small class="text-muted">10% complete</small>
@@ -612,7 +696,7 @@
         </div>
 
         <!-- Empty State (Hidden by default) -->
-        <div class="text-center py-5" id="emptyState" style="display: none;">
+        <div class="text-center py-5" id="emptyState" class="migrated-inline-style-20">
             <div class="empty-state">
                 <i class="fas fa-book-open fa-4x text-muted mb-4"></i>
                 <h4>No albums yet</h4>
@@ -625,283 +709,86 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Enhanced dashboard functionality
-        let isLoading = false;
-        let currentFilter = 'all';
 
-        // Filter functionality with smooth transitions
-        document.querySelectorAll('input[name="filter"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                const filter = this.id;
-                currentFilter = filter;
-                
-                // Add loading state
-                const grid = document.getElementById('albumsGrid');
-                grid.style.opacity = '0.5';
-                grid.style.pointerEvents = 'none';
-                
-                setTimeout(() => {
-                    filterAlbums(filter);
-                    grid.style.opacity = '1';
-                    grid.style.pointerEvents = 'auto';
-                }, 300);
-            });
-        });
 
-        function filterAlbums(filter) {
-            const albums = document.querySelectorAll('.album-card');
-            let visibleCount = 0;
-            
-            albums.forEach(album => {
-                const status = album.querySelector('.status-badge').textContent.toLowerCase();
-                let shouldShow = false;
-                
-                switch(filter) {
-                    case 'all':
-                        shouldShow = true;
-                        break;
-                    case 'draft':
-                        shouldShow = status.includes('draft');
-                        break;
-                    case 'review':
-                        shouldShow = status.includes('review');
-                        break;
-                    case 'completed':
-                        shouldShow = status.includes('completed') || status.includes('shipped');
-                        break;
-                }
-                
-                if (shouldShow) {
-                    album.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    album.style.display = 'none';
-                }
-            });
-            
-            // Show empty state if no albums match filter
-            const emptyState = document.getElementById('emptyState');
-            if (visibleCount === 0) {
-                emptyState.style.display = 'block';
-            } else {
-                emptyState.style.display = 'none';
-            }
-        }
 
-        // Search functionality
-        document.getElementById('searchInput').addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const albums = document.querySelectorAll('.album-card');
-            
-            albums.forEach(album => {
-                const title = album.querySelector('.card-title').textContent.toLowerCase();
-                const shouldShow = title.includes(searchTerm);
-                
-                if (shouldShow) {
-                    album.style.display = 'block';
-                } else {
-                    album.style.display = 'none';
-                }
-            });
-        });
 
-        // Load more functionality
-        document.getElementById('loadMoreBtn').addEventListener('click', function() {
-            if (isLoading) return;
-            
-            isLoading = true;
-            const btn = this;
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
-            btn.disabled = true;
-            
-            // Simulate loading
-            setTimeout(() => {
-                // Add more albums here
-                btn.innerHTML = originalText;
-                btn.disabled = false;
-                isLoading = false;
-                
-                // Show success message
-                showToast('More albums loaded successfully!', 'success');
-            }, 2000);
-        });
 
-        // Album card interactions
-        document.querySelectorAll('.album-card').forEach(card => {
-            // Hover effects
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-8px)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-            
-            // Click handlers
-            const continueBtn = card.querySelector('.btn-primary');
-            const previewBtn = card.querySelector('.btn-outline-secondary');
-            const orderBtn = card.querySelector('.btn-success');
-            const trackBtn = card.querySelector('.btn-info');
-            
-            if (continueBtn) {
-                continueBtn.addEventListener('click', function() {
-                    window.location.href = 'new-album.html';
-                });
-            }
-            
-            if (previewBtn) {
-                previewBtn.addEventListener('click', function() {
-                    showToast('Opening preview...', 'info');
-                });
-            }
-            
-            if (orderBtn) {
-                orderBtn.addEventListener('click', function() {
-                    window.location.href = 'checkout.html';
-                });
-            }
-            
-            if (trackBtn) {
-                trackBtn.addEventListener('click', function() {
-                    window.location.href = 'orders.html';
-                });
-            }
-        });
 
-        // Toast notification system
-        function showToast(message, type = 'info') {
-            const toast = document.createElement('div');
-            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
-            toast.style.top = '20px';
-            toast.style.right = '20px';
-            toast.style.zIndex = '9999';
-            
-            toast.innerHTML = `
-                <div class="d-flex">
-                    <div class="toast-body">
-                        ${message}
+
+
+
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <i class="fas fa-book-open me-2"></i>SnapStory
+                    </h5>
+                    <p class="mb-3">Create beautiful photo books online with our professional templates and easy-to-use
+                        editor.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
                     </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
                 </div>
-            `;
-            
-            document.body.appendChild(toast);
-            const bsToast = new bootstrap.Toast(toast);
-            bsToast.show();
-            
-            toast.addEventListener('hidden.bs.toast', function() {
-                document.body.removeChild(toast);
-            });
-        }
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Product</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="templates.html" class="text-decoration-none">Templates</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li><a href="features.html" class="text-decoration-none">Features</a></li>
+                        <li><a href="samples.html" class="text-decoration-none">Samples</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="help.html" class="text-decoration-none">Help Center</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+                        <li><a href="live-chat.html" class="text-decoration-none">Live Chat</a></li>
+                        <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
+                        <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        <li><a href="press.html" class="text-decoration-none">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="privacy.html" class="text-decoration-none">Privacy</a></li>
+                        <li><a href="terms.html" class="text-decoration-none">Terms</a></li>
+                        <li><a href="cookies.html" class="text-decoration-none">Cookies</a></li>
+                        <li><a href="gdpr.html" class="text-decoration-none">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 SnapStory. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="../assets/img/placeholder-secure-payment-200x30.png" alt="Secure Payment"
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        // Initialize dashboard
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add entrance animations
-            const cards = document.querySelectorAll('.album-card, .stat-card');
-            cards.forEach((card, index) => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(20px)';
-                
-                setTimeout(() => {
-                    card.style.transition = 'all 0.6s ease-out';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, index * 100);
-            });
-        });
-    </script>
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/frontend.js"></script>
 
-    <style>
-        /* Enhanced dashboard styles */
-        .stat-card {
-            transition: var(--transition);
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-        
-        .stat-icon {
-            transition: var(--transition);
-        }
-        
-        .stat-card:hover .stat-icon {
-            transform: scale(1.1);
-        }
-        
-        .album-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-        
-        .album-card:hover .album-overlay {
-            opacity: 1;
-        }
-        
-        .album-actions {
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .album-actions .btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        
-        .album-actions .btn:hover {
-            transform: scale(1.1);
-        }
-        
-        .empty-state {
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        
-        .progress {
-            background-color: #e9ecef;
-        }
-        
-        .btn-group-sm .btn {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.5rem;
-        }
-        
-        .dropdown-menu {
-            border: none;
-            box-shadow: var(--shadow-md);
-            border-radius: var(--border-radius);
-        }
-        
-        .dropdown-item {
-            padding: 0.5rem 1rem;
-            transition: var(--transition);
-        }
-        
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-        }
-        
-        .toast {
-            border-radius: var(--border-radius);
-        }
-    </style>
 </body>
-</html> 
+
+</html>

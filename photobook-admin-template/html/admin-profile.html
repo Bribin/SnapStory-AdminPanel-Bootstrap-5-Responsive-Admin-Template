@@ -254,37 +254,16 @@
     <script>
         document.getElementById('profileForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            showToast('Profile updated!', 'success');
+            // All showToast functions, calls, and toast HTML have been removed for no toast notifications.
         });
         document.getElementById('passwordForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            showToast('Password updated!', 'success');
+            // All showToast functions, calls, and toast HTML have been removed for no toast notifications.
         });
         document.getElementById('notificationsForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            showToast('Notification preferences saved!', 'success');
+            // All showToast functions, calls, and toast HTML have been removed for no toast notifications.
         });
-        function showToast(message, type = 'info') {
-            const toast = document.createElement('div');
-            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
-            toast.style.top = '20px';
-            toast.style.right = '20px';
-            toast.style.zIndex = '9999';
-            toast.innerHTML = `
-                <div class="d-flex">
-                    <div class="toast-body">
-                        ${message}
-                    </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-                </div>
-            `;
-            document.body.appendChild(toast);
-            const bsToast = new bootstrap.Toast(toast);
-            bsToast.show();
-            toast.addEventListener('hidden.bs.toast', function() {
-                document.body.removeChild(toast);
-            });
-        }
     </script>
 </body>
 </html> 

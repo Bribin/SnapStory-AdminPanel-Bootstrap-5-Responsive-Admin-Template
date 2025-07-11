@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory – Complete Photobook Web App Admin & Frontend Template</title>
+    <meta name="description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. It includes 14 core admin pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—plus 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation), along with modern frontend pages to launch your photobook business quickly. Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow with pixel-perfect consistency across devices.">
+    <meta name="keywords"
+        content="photobook app, frontend, backend, admin panel, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app template, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+    <meta property="og:description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+    <meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
+    <meta property="og:url" content="https://yourdomain.com/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+    <meta name="twitter:description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+    <meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html">
+                <i class="fas fa-book-open me-2"></i>SnapStory
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html"><i class="fas fa-home me-1"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates.html"><i class="fas fa-th-large me-1"></i>Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html"><i class="fas fa-tags me-1"></i>Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.html"><i class="fas fa-shopping-bag me-1"></i>Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="help.html"><i class="fas fa-question-circle me-1"></i>Help</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+                    <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header text-dark py-5 mb-5">
+        <div class="container">
+            <div class="row align-items-center min-vh-50">
+                <div class="col-lg-7">
+                    <div class="hero-content">
+                        <span class="badge bg-primary text-primary mb-3 px-3 py-2">All-in-One Photobook Platform</span>
+                        <h1 class="display-4 fw-bold mb-4 animate-fade-in">
+                            Powerful Features for <span class="text-primary">Stunning</span> Photo Books
+                        </h1>
+                        <p class="lead mb-4 text-dark opacity-75">
+                            SnapStory gives you everything you need to design, print, and share beautiful photo books—no
+                            design skills required.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <img src="../assets/img/placeholder-hero-600x400.png" alt="Features Preview"
+                        class="img-fluid rounded-3 shadow-lg animate-float">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Why SnapStory?</span>
+                    <h2 class="display-5 fw-bold mb-3">Everything You Need to Create, Print, and Share</h2>
+                    <p class="lead text-muted">From AI-powered layouts to premium printing, SnapStory is your complete
+                        photobook solution.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mx-auto mb-3">
+                                <i class="fas fa-magic fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">AI-Powered Templates</h5>
+                            <p class="card-text text-muted">Choose from hundreds of professionally designed templates
+                                that arrange your photos beautifully with AI assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-success bg-gradient text-white rounded-circle mx-auto mb-3">
+                                <i class="fas fa-upload fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Smart Upload & Organization</h5>
+                            <p class="card-text text-muted">Drag and drop your photos or import from social media. Our
+                                AI enhances and organizes them for the best results.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-warning bg-gradient text-white rounded-circle mx-auto mb-3">
+                                <i class="fas fa-shipping-fast fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Premium Printing & Delivery</h5>
+                            <p class="card-text text-muted">High-quality prints delivered to your door in 3-5 business
+                                days. Free shipping on orders over $50 with tracking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-info bg-gradient text-white rounded-circle mx-auto mb-3">
+                                <i class="fas fa-palette fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Full Customization</h5>
+                            <p class="card-text text-muted">Personalize every page with text, stickers, backgrounds, and
+                                layouts. Make your book truly unique.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-secondary bg-gradient text-white rounded-circle mx-auto mb-3">
+                                <i class="fas fa-cloud-upload-alt fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Cloud Storage</h5>
+                            <p class="card-text text-muted">Your photos and projects are safely stored in the cloud.
+                                Access and edit your books anytime, anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm feature-card">
+                        <div class="card-body text-center p-4">
+                            <div class="feature-icon bg-danger bg-gradient text-white rounded-circle mx-auto mb-3">
+                                <i class="fas fa-share-alt fa-2x"></i>
+                            </div>
+                            <h5 class="card-title">Easy Sharing</h5>
+                            <p class="card-text text-muted">Share your photobooks online with friends and family, or
+                                order extra copies with a click.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <span class="badge bg-warning bg-opacity-10 text-warning mb-3 px-3 py-2">Customer Stories</span>
+                    <h2 class="display-5 fw-bold mb-3">What Our Users Say</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="testimonial-card text-center">
+                                    <div class="testimonial-avatar mb-3">
+                                        <img src="../assets/img/placeholder-user-1-80x80.png" alt="Sarah M."
+                                            class="rounded-circle">
+                                    </div>
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="testimonial-text lead mb-3">"SnapStory made it so easy to create a
+                                        beautiful wedding album. The templates are gorgeous and the print quality is
+                                        amazing!"</p>
+                                    <h6 class="fw-bold">Sarah Mitchell</h6>
+                                    <small class="text-muted">Wedding Photographer</small>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center">
+                                    <div class="testimonial-avatar mb-3">
+                                        <img src="../assets/img/placeholder-user-2-80x80.png" alt="John D."
+                                            class="rounded-circle">
+                                    </div>
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="testimonial-text lead mb-3">"I made a family vacation book in under an
+                                        hour and it looks professional! Fast delivery too. Highly recommend."</p>
+                                    <h6 class="fw-bold">John Davis</h6>
+                                    <small class="text-muted">Family Man</small>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial-card text-center">
+                                    <div class="testimonial-avatar mb-3">
+                                        <img src="../assets/img/placeholder-user-3-80x80.png" alt="Maria L."
+                                            class="rounded-circle">
+                                    </div>
+                                    <div class="stars mb-3">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                    </div>
+                                    <p class="testimonial-text lead mb-3">"Perfect for creating portfolios! The print
+                                        quality is outstanding and the delivery was super fast."</p>
+                                    <h6 class="fw-bold">Maria Lopez</h6>
+                                    <small class="text-muted">Professional Photographer</small>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <i class="fas fa-book-open me-2"></i>SnapStory
+                    </h5>
+                    <p class="mb-3">Create beautiful photo books online with our professional templates and easy-to-use
+                        editor.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Product</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="templates.html" class="text-decoration-none">Templates</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li><a href="features.html" class="text-decoration-none">Features</a></li>
+                        <li><a href="samples.html" class="text-decoration-none">Samples</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="help.html" class="text-decoration-none">Help Center</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+                        <li><a href="live-chat.html" class="text-decoration-none">Live Chat</a></li>
+                        <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
+                        <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        <li><a href="press.html" class="text-decoration-none">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="privacy.html" class="text-decoration-none">Privacy</a></li>
+                        <li><a href="terms.html" class="text-decoration-none">Terms</a></li>
+                        <li><a href="cookies.html" class="text-decoration-none">Cookies</a></li>
+                        <li><a href="gdpr.html" class="text-decoration-none">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 SnapStory. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="../assets/img/placeholder-secure-payment-200x30.png" alt="Secure Payment"
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/frontend.js"></script>
+
+</body>
+
+</html>

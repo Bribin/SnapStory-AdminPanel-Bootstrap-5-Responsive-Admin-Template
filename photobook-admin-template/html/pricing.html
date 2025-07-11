@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SnapStory – Complete Photobook Web App Admin & Frontend Template</title>
+  <meta name="description"
+    content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. It includes 14 core admin pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—plus 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation), along with modern frontend pages to launch your photobook business quickly. Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow with pixel-perfect consistency across devices.">
+  <meta name="keywords"
+    content="photobook app, frontend, backend, admin panel, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app template, SnapStory">
+  <meta name="author" content="SnapStory Team">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#9381ff">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+  <meta property="og:description"
+    content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+  <meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
+  <meta property="og:url" content="https://yourdomain.com/">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+  <meta name="twitter:description"
+    content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+  <meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
+
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html">
+        <i class="fas fa-book-open me-2"></i>SnapStory
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.html"><i class="fas fa-home me-1"></i>Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="templates.html"><i class="fas fa-th-large me-1"></i>Templates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html"><i class="fas fa-tags me-1"></i>Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orders.html"><i class="fas fa-shopping-bag me-1"></i>Orders</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="help.html"><i class="fas fa-question-circle me-1"></i>Help</a>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-outline-primary btn-sm">Login</a>
+          <a href="signup.html" class="btn btn-primary btn-sm">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header text-dark py-5 mb-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-4 fw-bold mb-3">Simple, Flexible Pricing</h1>
+          <p class="lead text-muted mb-4">Start your SnapStory journey with a plan that fits your needs. No hidden fees,
+            no surprises—just beautiful photobooks and memories that last.</p>
+          <ul class="list-inline mb-4">
+            <li class="list-inline-item me-3"><i class="fas fa-check-circle text-success me-1"></i>Cancel anytime</li>
+            <li class="list-inline-item me-3"><i class="fas fa-check-circle text-success me-1"></i>Free trial available
+            </li>
+            <li class="list-inline-item"><i class="fas fa-check-circle text-success me-1"></i>100% satisfaction
+              guarantee</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary btn-lg px-4">Start Free Trial</a>
+        </div>
+        <div class="col-lg-5 text-center d-none d-lg-block">
+          <img src="../assets/img/placeholder-pricing-hero.png" alt="SnapStory Pricing"
+            class="img-fluid rounded-4 shadow-lg" class="migrated-inline-style-64">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-primary border-2">
+            <div class="card-body text-center py-5">
+              <h5 class="card-title mb-3">Basic</h5>
+              <h2 class="fw-bold text-primary mb-3">$9<span class="fs-6 fw-normal">/mo</span></h2>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-check text-success me-2"></i>10 Photo Books</li>
+                <li><i class="fas fa-check text-success me-2"></i>Standard Templates</li>
+                <li><i class="fas fa-check text-success me-2"></i>Email Support</li>
+              </ul>
+              <a href="signup.html" class="btn btn-outline-primary w-100">Choose Basic</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-lg border-success border-2 position-relative">
+            <div class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-success px-4 py-2 mt-3">
+              Most Popular</div>
+            <div class="card-body text-center py-5">
+              <h5 class="card-title mb-3">Pro</h5>
+              <h2 class="fw-bold text-success mb-3">$19<span class="fs-6 fw-normal">/mo</span></h2>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-check text-success me-2"></i>Unlimited Photo Books</li>
+                <li><i class="fas fa-check text-success me-2"></i>Premium Templates</li>
+                <li><i class="fas fa-check text-success me-2"></i>Priority Support</li>
+              </ul>
+              <a href="signup.html" class="btn btn-success w-100">Choose Pro</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-warning border-2">
+            <div class="card-body text-center py-5">
+              <h5 class="card-title mb-3">Enterprise</h5>
+              <h2 class="fw-bold text-warning mb-3">$49<span class="fs-6 fw-normal">/mo</span></h2>
+              <ul class="list-unstyled mb-4">
+                <li><i class="fas fa-check text-success me-2"></i>All Pro Features</li>
+                <li><i class="fas fa-check text-success me-2"></i>Custom Integrations</li>
+                <li><i class="fas fa-check text-success me-2"></i>Dedicated Manager</li>
+              </ul>
+              <a href="signup.html" class="btn btn-outline-warning w-100">Contact Sales</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Table -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12 text-center">
+          <h3 class="fw-bold mb-3">Compare Plans</h3>
+          <p class="text-muted mb-0">Find the plan that's right for you.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="table-responsive">
+            <table class="table table-bordered align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th class="text-start">Feature</th>
+                  <th class="text-center">Basic</th>
+                  <th class="text-center">Pro</th>
+                  <th class="text-center">Enterprise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Photo Books & Pages -->
+                <tr class="table-primary">
+                  <td colspan="4" class="fw-bold text-primary p-3 bg-white border-bottom">
+                    <i class="fas fa-book me-2"></i>Photo Books & Pages
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-book me-2 text-muted"></i>Photo Books per Month</td>
+                  <td class="text-center">10</td>
+                  <td class="text-center"><i class="fas fa-infinity text-success"></i> Unlimited</td>
+                  <td class="text-center"><i class="fas fa-infinity text-success"></i> Unlimited</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-file-alt me-2 text-muted"></i>Pages per Book</td>
+                  <td class="text-center">20 pages</td>
+                  <td class="text-center">100 pages</td>
+                  <td class="text-center">200 pages</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-images me-2 text-muted"></i>Photos per Book</td>
+                  <td class="text-center">100 photos</td>
+                  <td class="text-center">500 photos</td>
+                  <td class="text-center">1000 photos</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-download me-2 text-muted"></i>Digital Downloads</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+
+                <!-- Templates & Design -->
+                <tr class="table-primary">
+                  <td colspan="4" class="fw-bold text-primary p-3 bg-white border-bottom">
+                    <i class="fas fa-palette me-2"></i>Templates & Design
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-th-large me-2 text-muted"></i>Template Library</td>
+                  <td class="text-center">50 templates</td>
+                  <td class="text-center">200+ templates</td>
+                  <td class="text-center">500+ templates</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-palette me-2 text-muted"></i>Custom Themes</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-paint-brush me-2 text-muted"></i>Advanced Editor</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-magic me-2 text-muted"></i>AI Background Removal</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-crop me-2 text-muted"></i>Photo Enhancement</td>
+                  <td class="text-center">Basic</td>
+                  <td class="text-center">Advanced</td>
+                  <td class="text-center">Professional</td>
+                </tr>
+
+                <!-- Storage & Sharing -->
+                <tr class="table-primary">
+                  <td colspan="4" class="fw-bold text-primary p-3 bg-white border-bottom">
+                    <i class="fas fa-cloud me-2"></i>Storage & Sharing
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-cloud me-2 text-muted"></i>Cloud Storage</td>
+                  <td class="text-center">5 GB</td>
+                  <td class="text-center">50 GB</td>
+                  <td class="text-center">500 GB</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-share-alt me-2 text-muted"></i>Collaboration</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center">Up to 5 users</td>
+                  <td class="text-center">Unlimited users</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-link me-2 text-muted"></i>Share Links</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-mobile-alt me-2 text-muted"></i>Mobile App Access</td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+
+                <!-- Printing & Delivery -->
+                <tr class="table-primary">
+                  <td colspan="4" class="fw-bold text-primary p-3 bg-white border-bottom">
+                    <i class="fas fa-print me-2"></i>Printing & Delivery
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-print me-2 text-muted"></i>Print Quality</td>
+                  <td class="text-center">Standard</td>
+                  <td class="text-center">Premium</td>
+                  <td class="text-center">Professional</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-shipping-fast me-2 text-muted"></i>Delivery Time</td>
+                  <td class="text-center">7-10 days</td>
+                  <td class="text-center">3-5 days</td>
+                  <td class="text-center">1-3 days</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-box me-2 text-muted"></i>Packaging</td>
+                  <td class="text-center">Standard</td>
+                  <td class="text-center">Premium</td>
+                  <td class="text-center">Luxury</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-globe me-2 text-muted"></i>International Shipping</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+
+                <!-- Support & Services -->
+                <tr class="table-primary">
+                  <td colspan="4" class="fw-bold text-primary p-3 bg-white border-bottom">
+                    <i class="fas fa-headset me-2"></i>Support & Services
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-headset me-2 text-muted"></i>Customer Support</td>
+                  <td class="text-center">Email only</td>
+                  <td class="text-center">Email + Chat</td>
+                  <td class="text-center">Priority + Phone</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-clock me-2 text-muted"></i>Response Time</td>
+                  <td class="text-center">24-48 hours</td>
+                  <td class="text-center">4-8 hours</td>
+                  <td class="text-center">1-2 hours</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-user-tie me-2 text-muted"></i>Dedicated Manager</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-graduation-cap me-2 text-muted"></i>Design Consultation</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+
+                <!-- Integrations & API -->
+                <tr class="table-primary">
+                  <td colspan="4" class="fw-bold text-primary p-3 bg-white border-bottom">
+                    <i class="fas fa-plug me-2"></i>Integrations & API
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-plug me-2 text-muted"></i>Third-party Integrations</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center">Basic</td>
+                  <td class="text-center">Advanced</td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-code me-2 text-muted"></i>API Access</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-cogs me-2 text-muted"></i>Custom Branding</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-database me-2 text-muted"></i>Data Export</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+
+                <!-- Security & Compliance -->
+                <tr class="table-primary">
+                  <td colspan="4" class="fw-bold text-primary p-3 bg-white border-bottom">
+                    <i class="fas fa-shield-alt me-2"></i>Security & Compliance
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-shield-alt me-2 text-muted"></i>Data Encryption</td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-user-lock me-2 text-muted"></i>Two-Factor Authentication</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-gavel me-2 text-muted"></i>GDPR Compliance</td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+                <tr>
+                  <td><i class="fas fa-certificate me-2 text-muted"></i>SOC 2 Compliance</td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-times text-danger"></i></td>
+                  <td class="text-center"><i class="fas fa-check text-success"></i></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotions -->
+  <section class="pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="alert alert-info text-center mb-0" role="alert">
+            <strong>Special Offer:</strong> Get 2 months free on annual plans! <a href="#" class="alert-link">Learn
+              more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="display-5 fw-bold mb-3">Everything You Need to Create Amazing Photo Books</h2>
+          <p class="lead text-muted">Powerful features that make creating beautiful photo books effortless</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="text-center">
+            <div
+              class="bg-primary bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              class="migrated-inline-style-65">
+              <i class="fas fa-magic text-white fs-3"></i>
+            </div>
+            <h5 class="fw-bold mb-3">AI-Powered Editing</h5>
+            <p class="text-muted">Automatically enhance photos, remove backgrounds, and suggest perfect layouts with our
+              advanced AI technology.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <div
+              class="bg-success bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              class="migrated-inline-style-66">
+              <i class="fas fa-palette text-white fs-3"></i>
+            </div>
+            <h5 class="fw-bold mb-3">Premium Templates</h5>
+            <p class="text-muted">Choose from hundreds of professionally designed templates for weddings, family albums,
+              travel, and more.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="text-center">
+            <div
+              class="bg-warning bg-gradient rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+              class="migrated-inline-style-67">
+              <i class="fas fa-shipping-fast text-white fs-3"></i>
+            </div>
+            <h5 class="fw-bold mb-3">Fast Delivery</h5>
+            <p class="text-muted">Get your professionally printed photo books delivered to your door in as little as 3-5
+              business days.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col-lg-8 mx-auto">
+          <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Customer Stories</span>
+          <h2 class="display-5 fw-bold mb-3">What Our Customers Say</h2>
+          <p class="lead text-muted">Join thousands of happy customers who've created beautiful memories</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="testimonial-card text-center">
+                  <div class="testimonial-avatar mb-3">
+                    <img src="../assets/img/placeholder-user-1-80x80.png" alt="Sarah M." class="rounded-circle">
+                  </div>
+                  <div class="stars mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                  </div>
+                  <p class="testimonial-text lead mb-3">"I created a wedding album for my daughter and it turned out
+                    absolutely beautiful! The templates are gorgeous and the quality is amazing. The Pro plan was
+                    perfect for unlimited books."</p>
+                  <h6 class="fw-bold">Sarah Mitchell</h6>
+                  <small class="text-muted">Wedding Photographer</small>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonial-card text-center">
+                  <div class="testimonial-avatar mb-3">
+                    <img src="../assets/img/placeholder-user-2-80x80.png" alt="John D." class="rounded-circle">
+                  </div>
+                  <div class="stars mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                  </div>
+                  <p class="testimonial-text lead mb-3">"The drag-and-drop editor is so intuitive. I made a family
+                    vacation book in under an hour and it looks professional! Fast delivery too. Great value for money."
+                  </p>
+                  <h6 class="fw-bold">John Davis</h6>
+                  <small class="text-muted">Family Man</small>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="testimonial-card text-center">
+                  <div class="testimonial-avatar mb-3">
+                    <img src="../assets/img/placeholder-user-3-80x80.png" alt="Maria L." class="rounded-circle">
+                  </div>
+                  <div class="stars mb-3">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                  </div>
+                  <p class="testimonial-text lead mb-3">"Perfect for creating portfolios! The print quality is
+                    outstanding and the delivery was super fast. The Enterprise plan gives us everything we need for our
+                    studio."</p>
+                  <h6 class="fw-bold">Maria Lopez</h6>
+                  <small class="text-muted">Professional Photographer</small>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row text-center mb-5">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+          <p class="lead text-muted">Everything you need to know about SnapStory pricing and plans</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1"
+                  aria-expanded="true" aria-controls="collapse1">
+                  Can I cancel my subscription anytime?
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes! You can cancel your subscription at any time. When you cancel, you'll continue to have access to
+                  your plan until the end of your current billing period. No questions asked.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  Is there a free trial available?
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Absolutely! We offer a 14-day free trial on all plans. You can create and design photo books during
+                  the trial period. No credit card required to start your trial.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                  What's the difference between monthly and annual billing?
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Annual billing saves you money! You get 2 months free when you choose annual billing, which means you
+                  pay for 10 months and get 12 months of service. Plus, you lock in your current price for the year.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  Can I upgrade or downgrade my plan?
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Yes, you can change your plan at any time. When you upgrade, you'll be charged the prorated
+                  difference. When you downgrade, the new rate will apply at your next billing cycle.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  What payment methods do you accept?
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5"
+                data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and Apple Pay. All
+                  payments are processed securely through our trusted payment partners.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-3">Ready to Start Your Photo Book Journey?</h2>
+      <p class="lead mb-4">Join thousands of happy customers creating beautiful memories</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a href="signup.html" class="btn btn-light btn-lg px-5 d-flex align-items-center">
+          <i class="fas fa-rocket me-2"></i>Start Free Trial
+        </a>
+        <a href="help.html" class="btn btn-outline-light btn-lg px-5 d-flex align-items-center">
+          <i class="fas fa-question-circle me-2"></i>Need Help?
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h5 class="fw-bold mb-3 d-flex align-items-center">
+            <i class="fas fa-book-open me-2"></i>SnapStory
+          </h5>
+          <p class="mb-3">Create beautiful photo books online with our professional templates and easy-to-use editor.
+          </p>
+          <div class="social-links">
+            <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Product</h6>
+          <ul class="list-unstyled">
+            <li><a href="templates.html" class="text-decoration-none">Templates</a></li>
+            <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+            <li><a href="features.html" class="text-decoration-none">Features</a></li>
+            <li><a href="samples.html" class="text-decoration-none">Samples</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Support</h6>
+          <ul class="list-unstyled">
+            <li><a href="help.html" class="text-decoration-none">Help Center</a></li>
+            <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+            <li><a href="live-chat.html" class="text-decoration-none">Live Chat</a></li>
+            <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="about.html" class="text-decoration-none">About</a></li>
+            <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
+            <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+            <li><a href="press.html" class="text-decoration-none">Press</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h6 class="fw-bold mb-3">Legal</h6>
+          <ul class="list-unstyled">
+            <li><a href="privacy.html" class="text-decoration-none">Privacy</a></li>
+            <li><a href="terms.html" class="text-decoration-none">Terms</a></li>
+            <li><a href="cookies.html" class="text-decoration-none">Cookies</a></li>
+            <li><a href="gdpr.html" class="text-decoration-none">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2024 SnapStory. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <img src="../assets/img/placeholder-secure-payment-200x30.png" alt="Secure Payment" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/jquery.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/frontend.js"></script>
+
+</body>
+
+</html>

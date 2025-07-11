@@ -96,4 +96,20 @@ This document lists all admin panel UI pages for the PhotoBook web application, 
 
 ---
 
-**All pages are built with Bootstrap 5, Font Awesome, and follow modern, responsive, and accessible UX best practices.** 
+**All pages are built with Bootstrap 5, Font Awesome, and follow modern, responsive, and accessible UX best practices.**
+
+---
+
+## Image Usage & Credits
+
+All images used in the downloadable template are local placeholder images located in `assets/img/` and are generated specifically for demonstration purposes. These placeholder images are free to use and do not depict real people or brands.
+
+For the live demo and preview, high-quality stock images from Unsplash and RandomUser are used to showcase the template. These images are **not included** in the download package.
+
+**Image Credits:**
+- Unsplash: https://unsplash.com/
+- RandomUser: https://randomuser.me/
+
+If you wish to use your own images, simply replace the placeholder image files in `assets/img/` with your own, keeping the same file names for seamless integration.
+
+> **Note:** Images in the live demo are for demonstration purposes only and are not included in the download package. 

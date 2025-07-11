@@ -308,27 +308,7 @@
             document.getElementById('bulkDownload').disabled = count === 0;
         }
         // Bulk actions (simulate with toast)
-        function showToast(message, type = 'info') {
-            const toast = document.createElement('div');
-            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
-            toast.style.top = '20px';
-            toast.style.right = '20px';
-            toast.style.zIndex = '9999';
-            toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
-            document.body.appendChild(toast);
-            const bsToast = new bootstrap.Toast(toast);
-            bsToast.show();
-            toast.addEventListener('hidden.bs.toast', function() { document.body.removeChild(toast); });
-        }
-        document.getElementById('bulkApprove').addEventListener('click', function() {
-            showToast('Selected albums approved!', 'success');
-        });
-        document.getElementById('bulkReject').addEventListener('click', function() {
-            showToast('Selected albums rejected.', 'danger');
-        });
-        document.getElementById('bulkDownload').addEventListener('click', function() {
-            showToast('Albums download started.', 'info');
-        });
+        // All showToast functions, calls, and toast HTML have been removed for no toast notifications.
     </script>
 </body>
 </html> 

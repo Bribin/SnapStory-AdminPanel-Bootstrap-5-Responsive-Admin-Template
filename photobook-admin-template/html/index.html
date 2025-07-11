@@ -1,53 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
-    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <title>SnapStory – Complete Photobook Web App Admin & Frontend Template</title>
+    <meta name="description" content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. It includes 14 core admin pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—plus 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation), along with modern frontend pages to launch your photobook business quickly. Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow with pixel-perfect consistency across devices.">
+    <meta name="keywords" content="photobook app, frontend, backend, admin panel, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app template, SnapStory">
     <meta name="author" content="SnapStory Team">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#9381ff">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
-    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
-    <meta property="og:url" content="https://yourdomain.com/">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
-    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+<meta property="og:description" content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+<meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
+<meta property="og:url" content="https://yourdomain.com/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+<meta name="twitter:description" content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+<meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
-    <style>
-        footer a.text-decoration-none {
-            position: relative;
-            transition: color 0.2s;
-        }
-        footer a.text-decoration-none::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -2px;
-            width: 0;
-            height: 2px;
-            background: #9381ff;
-            transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
-        }
-        footer a.text-decoration-none:hover::after,
-        footer a.text-decoration-none:focus::after {
-            width: 100%;
-        }
-        footer a.text-decoration-none:hover, 
-        footer a.text-decoration-none:focus {
-            color: #9381ff !important;
-            text-decoration: none !important;
-        }
-    </style>
+
 </head>
 <body>
     <!-- Navigation -->
@@ -88,27 +74,30 @@
     <!-- Hero Section -->
     <section class="hero-section text-white py-5 position-relative">
         <!-- Decorative SVG Overlay -->
-        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100" style="pointer-events:none;z-index:1;opacity:0.3;">
-            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"
+            class="migrated-inline-style-22">
+            <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <defs>
                     <pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse">
-                        <circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)"/>
+                        <circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.1)" />
                     </pattern>
                 </defs>
-                <rect width="100" height="100" fill="url(#grain)"/>
+                <rect width="100" height="100" fill="url(#grain)" />
             </svg>
         </div>
         <div class="container" style="position:relative;z-index:2;">
             <div class="row align-items-center ">
-                <div class="col-lg-6">
+                <div class="col-lg-6 order-2 order-lg-1">
                     <div class="hero-content">
                         <span class="badge bg-primary text-primary mb-3 px-3 py-2">✨ Trusted by 50,000+ customers</span>
                         <h1 class="display-4 text-dark  fw-bold mb-4 animate-fade-in">
-                            Create Beautiful Photo Books in 
+                            Create Beautiful Photo Books in
                             <span class="text-primary">Minutes</span>
                         </h1>
                         <p class="lead mb-4 text-dark opacity-75">
-                            Transform your memories into stunning photo books with our professional templates and AI-powered editor. 
+                            Transform your memories into stunning photo books with our professional templates and
+                            AI-powered editor.
                             High-quality prints delivered to your door.
                         </p>
                         <div class="d-flex flex-wrap gap-3 mb-4">
@@ -119,7 +108,7 @@
                                 <i class="fas fa-eye me-2"></i>View Demo
                             </a>
                         </div>
-                        <div class="hero-stats d-flex gap-4 text-dark">
+                        <div class="hero-stats d-flex flex-column flex-md-row gap-4 text-dark">
                             <div class="stat-item">
                                 <div class="fw-bold fs-4">24hr</div>
                                 <small class="opacity-75">Fastest Delivery</small>
@@ -135,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 order-1 order-lg-2">
                     <div class="hero-image text-center position-relative">
                         <div class="floating-card card-1">
                             <i class="fas fa-star text-dark"></i>
@@ -145,7 +134,8 @@
                             <i class="fas fa-heart text-danger"></i>
                             <small class="text-dark">Love it!</small>
                         </div>
-                        <img src="../assets/img/placeholder-hero-600x400.png" alt="SnapStory Preview" class="img-fluid rounded-3 shadow-lg animate-float">
+                        <img src="../assets/img/placeholder-hero-600x400.png" alt="SnapStory Preview"
+                            class="img-fluid rounded-3 shadow-lg animate-float">
                     </div>
                 </div>
             </div>
@@ -157,7 +147,8 @@
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-lg-8 mx-auto">
-                    <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Why Choose SnapStory?</span>
+                    <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2">Why Choose
+                        SnapStory?</span>
                     <h2 class="display-5 fw-bold mb-3">Everything you need to create professional photo books</h2>
                     <p class="lead text-muted">From AI-powered editing to premium printing, we've got you covered</p>
                 </div>
@@ -170,7 +161,8 @@
                                 <i class="fas fa-magic fa-2x"></i>
                             </div>
                             <h5 class="card-title">AI-Powered Templates</h5>
-                            <p class="card-text text-muted">Choose from hundreds of professionally designed templates that automatically arrange your photos beautifully with AI assistance.</p>
+                            <p class="card-text text-muted">Choose from hundreds of professionally designed templates
+                                that automatically arrange your photos beautifully with AI assistance.</p>
                             <a href="#" class="btn btn-link text-primary p-0">Learn more →</a>
                         </div>
                     </div>
@@ -182,7 +174,8 @@
                                 <i class="fas fa-upload fa-2x"></i>
                             </div>
                             <h5 class="card-title">Smart Upload</h5>
-                            <p class="card-text text-muted">Drag and drop your photos or import from social media. Our AI automatically enhances and organizes them for the best results.</p>
+                            <p class="card-text text-muted">Drag and drop your photos or import from social media. Our
+                                AI automatically enhances and organizes them for the best results.</p>
                             <a href="#" class="btn btn-link text-primary p-0">Learn more →</a>
                         </div>
                     </div>
@@ -194,7 +187,8 @@
                                 <i class="fas fa-shipping-fast fa-2x"></i>
                             </div>
                             <h5 class="card-title">Premium Delivery</h5>
-                            <p class="card-text text-muted">Premium quality prints delivered to your door in 3-5 business days. Free shipping on orders over $50 with tracking.</p>
+                            <p class="card-text text-muted">Premium quality prints delivered to your door in 3-5
+                                business days. Free shipping on orders over $50 with tracking.</p>
                             <a href="#" class="btn btn-link text-primary p-0">Learn more →</a>
                         </div>
                     </div>
@@ -249,7 +243,8 @@
                             <div class="carousel-item active">
                                 <div class="testimonial-card text-center">
                                     <div class="testimonial-avatar mb-3">
-                                        <img src="../assets/img/placeholder-user-1-80x80.png" alt="Sarah M." class="rounded-circle">
+                                        <img src="../assets/img/placeholder-user-1-80x80.png" alt="Sarah M."
+                                            class="rounded-circle">
                                     </div>
                                     <div class="stars mb-3">
                                         <i class="fas fa-star text-warning"></i>
@@ -258,7 +253,9 @@
                                         <i class="fas fa-star text-warning"></i>
                                         <i class="fas fa-star text-warning"></i>
                                     </div>
-                                    <p class="testimonial-text lead mb-3">"I created a wedding album for my daughter and it turned out absolutely beautiful! The templates are gorgeous and the quality is amazing. Highly recommend!"</p>
+                                    <p class="testimonial-text lead mb-3">"I created a wedding album for my daughter and
+                                        it turned out absolutely beautiful! The templates are gorgeous and the quality
+                                        is amazing. Highly recommend!"</p>
                                     <h6 class="fw-bold">Sarah Mitchell</h6>
                                     <small class="text-muted">Wedding Photographer</small>
                                 </div>
@@ -266,7 +263,8 @@
                             <div class="carousel-item">
                                 <div class="testimonial-card text-center">
                                     <div class="testimonial-avatar mb-3">
-                                        <img src="../assets/img/placeholder-user-2-80x80.png" alt="John D." class="rounded-circle">
+                                        <img src="../assets/img/placeholder-user-2-80x80.png" alt="John D."
+                                            class="rounded-circle">
                                     </div>
                                     <div class="stars mb-3">
                                         <i class="fas fa-star text-warning"></i>
@@ -275,7 +273,9 @@
                                         <i class="fas fa-star text-warning"></i>
                                         <i class="fas fa-star text-warning"></i>
                                     </div>
-                                    <p class="testimonial-text lead mb-3">"The drag-and-drop editor is so intuitive. I made a family vacation book in under an hour and it looks professional! Fast delivery too."</p>
+                                    <p class="testimonial-text lead mb-3">"The drag-and-drop editor is so intuitive. I
+                                        made a family vacation book in under an hour and it looks professional! Fast
+                                        delivery too."</p>
                                     <h6 class="fw-bold">John Davis</h6>
                                     <small class="text-muted">Family Man</small>
                                 </div>
@@ -283,7 +283,8 @@
                             <div class="carousel-item">
                                 <div class="testimonial-card text-center">
                                     <div class="testimonial-avatar mb-3">
-                                        <img src="../assets/img/placeholder-user-3-80x80.png" alt="Maria L." class="rounded-circle">
+                                        <img src="../assets/img/placeholder-user-3-80x80.png" alt="Maria L."
+                                            class="rounded-circle">
                                     </div>
                                     <div class="stars mb-3">
                                         <i class="fas fa-star text-warning"></i>
@@ -292,16 +293,20 @@
                                         <i class="fas fa-star text-warning"></i>
                                         <i class="fas fa-star text-warning"></i>
                                     </div>
-                                    <p class="testimonial-text lead mb-3">"Perfect for creating portfolios! The print quality is outstanding and the delivery was super fast. Will definitely use again!"</p>
+                                    <p class="testimonial-text lead mb-3">"Perfect for creating portfolios! The print
+                                        quality is outstanding and the delivery was super fast. Will definitely use
+                                        again!"</p>
                                     <h6 class="fw-bold">Maria Lopez</h6>
                                     <small class="text-muted">Professional Photographer</small>
                                 </div>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
@@ -327,6 +332,17 @@
     </section>
 
     <!-- Footer -->
+
+
+
+
+
+    
+
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/frontend.js"></script>
+
+
     <footer class="bg-dark text-white py-5">
         <div class="container">
             <div class="row g-4">
@@ -391,50 +407,10 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/frontend.js"></script>
 
-        // Add scroll effect to navbar
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.feature-card, .step-number').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
 </body>
-</html> 
+
+</html>

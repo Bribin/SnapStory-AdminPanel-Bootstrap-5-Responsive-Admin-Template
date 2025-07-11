@@ -118,36 +118,8 @@ $(function() {
         $('.quick-actions .btn').on('click', function(e) {
             if ($(this).attr('href') === '#') {
                 e.preventDefault();
-                showToast('Feature coming soon!', 'info');
+                // All showToast functions and calls have been removed for no toast notifications.
             }
-        });
-    }
-
-    // Toast notification system
-    function showToast(message, type = 'info') {
-        const toast = $('<div></div>');
-        toast.addClass(`toast align-items-center text-white bg-${type} border-0 position-fixed`)
-            .css({
-                top: '20px',
-                right: '20px',
-                zIndex: 9999
-            });
-
-        toast.html(`
-            <div class="d-flex">
-                <div class="toast-body">
-                    ${message}
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
-            </div>
-        `);
-
-        $('body').append(toast);
-        const bsToast = new bootstrap.Toast(toast[0]);
-        bsToast.show();
-
-        toast.on('hidden.bs.toast', function() {
-            toast.remove();
         });
     }
 

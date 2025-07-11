@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapStory – Complete Photobook Web App Admin & Frontend Template</title>
+    <meta name="description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. It includes 14 core admin pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—plus 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation), along with modern frontend pages to launch your photobook business quickly. Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow with pixel-perfect consistency across devices.">
+    <meta name="keywords"
+        content="photobook app, frontend, backend, admin panel, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app template, SnapStory">
+    <meta name="author" content="SnapStory Team">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#9381ff">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+    <meta property="og:description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+    <meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
+    <meta property="og:url" content="https://yourdomain.com/">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+    <meta name="twitter:description"
+        content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+    <meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+    <!-- Navbar (same as new-album.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="index.html">
+                <i class="fas fa-book-open me-2"></i>SnapStory
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html"><i class="fas fa-home me-1"></i>Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="templates.html"><i class="fas fa-th-large me-1"></i>Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pricing.html"><i class="fas fa-tags me-1"></i>Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orders.html"><i class="fas fa-shopping-bag me-1"></i>Orders</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="help.html"><i class="fas fa-question-circle me-1"></i>Help</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="new-album-customize.html" class="btn btn-outline-primary btn-sm">Previous</a>
+                    <a href="new-album-preview.html" class="btn btn-primary btn-sm">Next</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-4">
+        <!-- Progress Bar -->
+        <div class="progress mb-4" class="migrated-inline-style-33">
+            <div class="progress-bar" role="progressbar" class="migrated-inline-style-34"></div>
+        </div>
+        <!-- Step Navigation -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="step-navigation d-flex justify-content-between">
+                    <div class="step-item" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Upload Photos</div>
+                    </div>
+                    <div class="step-item" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Design & Layout</div>
+                    </div>
+                    <div class="step-item active" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Manage Pages</div>
+                    </div>
+                    <div class="step-item" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Preview & Order</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content with Sidebar -->
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3">Album Progress</h6>
+                        <div class="progress mb-3" class="migrated-inline-style-35">
+                            <div class="progress-bar" role="progressbar" class="migrated-inline-style-36"></div>
+                        </div>
+                        <p class="text-muted small mb-3">Step 3 of 4</p>
+                        <div class="d-grid">
+                            <button class="btn btn-outline-primary btn-sm">Save Progress</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h6 class="fw-bold mb-3">Layout Tips</h6>
+                        <ul class="list-unstyled small text-muted">
+                            <li class="mb-2"><i class="fas fa-th-large text-primary me-2"></i>Choose layout based on
+                                photo count</li>
+                            <li class="mb-2"><i class="fas fa-eye text-primary me-2"></i>Consider visual flow and
+                                storytelling</li>
+                            <li class="mb-2"><i class="fas fa-balance-scale text-primary me-2"></i>Balance photos and
+                                white space</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold mb-3">
+                            <i class="fas fa-th-large text-primary me-2"></i>Choose Your Layout
+                        </h3>
+                        <p class="text-muted mb-4">Select a template that matches your style</p>
+                        <div class="template-categories mb-4">
+                            <div class="btn-group" role="group">
+                                <input type="radio" class="btn-check" name="category" id="all" checked>
+                                <label class="btn btn-outline-primary" for="all">All</label>
+                                <input type="radio" class="btn-check" name="category" id="modern">
+                                <label class="btn btn-outline-primary" for="modern">Modern</label>
+                                <input type="radio" class="btn-check" name="category" id="classic">
+                                <label class="btn btn-outline-primary" for="classic">Classic</label>
+                                <input type="radio" class="btn-check" name="category" id="minimal">
+                                <label class="btn btn-outline-primary" for="minimal">Minimal</label>
+                                <input type="radio" class="btn-check" name="category" id="creative">
+                                <label class="btn btn-outline-primary" for="creative">Creative</label>
+                            </div>
+                        </div>
+                        <div class="template-grid row g-3">
+                            <!-- Template cards go here (copy from new-album.html) -->
+                            <div class="col-md-4">
+                                <div class="template-card" data-template="modern1">
+                                    <img src="../assets/img/placeholder-template1-300x200.png" alt="Modern Template 1"
+                                        class="img-fluid rounded">
+                                    <div class="template-overlay">
+                                        <button class="btn btn-light btn-sm">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="template-card" data-template="classic1">
+                                    <img src="../assets/img/placeholder-template2-300x200.png" alt="Classic Template 1"
+                                        class="img-fluid rounded">
+                                    <div class="template-overlay">
+                                        <button class="btn btn-light btn-sm">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="template-card" data-template="minimal1">
+                                    <img src="../assets/img/placeholder-template3-300x200.png" alt="Minimal Template 1"
+                                        class="img-fluid rounded">
+                                    <div class="template-overlay">
+                                        <button class="btn btn-light btn-sm">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="template-card" data-template="creative1">
+                                    <img src="../assets/img/placeholder-template1-300x200.png" alt="Creative Template 1"
+                                        class="img-fluid rounded">
+                                    <div class="template-overlay">
+                                        <button class="btn btn-light btn-sm">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="template-card" data-template="modern2">
+                                    <img src="../assets/img/placeholder-template2-300x200.png" alt="Modern Template 2"
+                                        class="img-fluid rounded">
+                                    <div class="template-overlay">
+                                        <button class="btn btn-light btn-sm">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="template-card" data-template="classic2">
+                                    <img src="../assets/img/placeholder-template3-300x200.png" alt="Classic Template 2"
+                                        class="img-fluid rounded">
+                                    <div class="template-overlay">
+                                        <button class="btn btn-light btn-sm">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer (copied from index.html for consistency) -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <i class="fas fa-book-open me-2"></i>SnapStory
+                    </h5>
+                    <p class="mb-3">Create beautiful photo books online with our professional templates and easy-to-use
+                        editor.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Product</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="templates.html" class="text-decoration-none">Templates</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li><a href="features.html" class="text-decoration-none">Features</a></li>
+                        <li><a href="samples.html" class="text-decoration-none">Samples</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="help.html" class="text-decoration-none">Help Center</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+                        <li><a href="live-chat.html" class="text-decoration-none">Live Chat</a></li>
+                        <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
+                        <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        <li><a href="press.html" class="text-decoration-none">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="privacy.html" class="text-decoration-none">Privacy</a></li>
+                        <li><a href="terms.html" class="text-decoration-none">Terms</a></li>
+                        <li><a href="cookies.html" class="text-decoration-none">Cookies</a></li>
+                        <li><a href="gdpr.html" class="text-decoration-none">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 SnapStory. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="../assets/img/placeholder-secure-payment-200x30.png" alt="Secure Payment"
+                        class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/frontend.js"></script>
+
+</body>
+
+</html>

@@ -207,33 +207,22 @@
     </div>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <script>
-        function showToast(message, type = 'info') {
-            const toast = document.createElement('div');
-            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
-            toast.style.top = '20px';
-            toast.style.right = '20px';
-            toast.style.zIndex = '9999';
-            toast.innerHTML = `<div class="d-flex"><div class="toast-body">${message}</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>`;
-            document.body.appendChild(toast);
-            const bsToast = new bootstrap.Toast(toast);
-            bsToast.show();
-            toast.addEventListener('hidden.bs.toast', function() { document.body.removeChild(toast); });
-        }
+        // All showToast functions, calls, and toast HTML have been removed for no toast notifications.
         document.getElementById('downloadAlbum').addEventListener('click', function() {
-            showToast('Album download started.', 'info');
+            // showToast('Album download started.', 'info'); // Removed
         });
         document.getElementById('approveAlbum').addEventListener('click', function() {
-            showToast('Album approved!', 'success');
+            // showToast('Album approved!', 'success'); // Removed
         });
         document.getElementById('rejectAlbum').addEventListener('click', function() {
-            showToast('Album rejected.', 'danger');
+            // showToast('Album rejected.', 'danger'); // Removed
         });
         document.getElementById('flagAlbum').addEventListener('click', function() {
-            showToast('Album flagged for further review.', 'warning');
+            // showToast('Album flagged for further review.', 'warning'); // Removed
         });
         document.getElementById('notesForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            showToast('Note saved!', 'success');
+            // showToast('Note saved!', 'success'); // Removed
         });
     </script>
 </body>

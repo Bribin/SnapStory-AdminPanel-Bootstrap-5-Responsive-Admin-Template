@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps</title>
-    <meta name="description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta name="keywords" content="admin panel, photobook, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app, Font Awesome, SnapStory">
+    <title>SnapStory – Complete Photobook Web App Admin & Frontend Template</title>
+    <meta name="description" content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. It includes 14 core admin pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—plus 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation), along with modern frontend pages to launch your photobook business quickly. Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow with pixel-perfect consistency across devices.">
+    <meta name="keywords" content="photobook app, frontend, backend, admin panel, Bootstrap 5, responsive, dashboard, user management, order management, analytics, moderation, notifications, system settings, web app template, SnapStory">
     <meta name="author" content="SnapStory Team">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#9381ff">
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
-    <meta property="og:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
-    <meta property="og:url" content="https://yourdomain.com/">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SnapStory AdminPanel – Bootstrap 5 Responsive Admin Template for Photobook Apps">
-    <meta name="twitter:description" content="SnapStory AdminPanel is a sleek, fully responsive Bootstrap 5 admin interface tailored for photobook web applications. It includes 14 core pages—Dashboard, User & Order Management, Album Moderation, Analytics & Reports, Notifications, Support & Logs, System Settings—and 5 optional modules (Roles & Permissions, 2FA Login, System Health Monitoring, Announcements, Help Documentation). Built with clean, semantic HTML5, utility-first Bootstrap classes, and Font Awesome icons, SnapStory accelerates your development workflow and delivers pixel-perfect consistency across devices.">
-    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/9381ff/ffffff?text=SnapStory+AdminPanel">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+<meta property="og:description" content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+<meta property="og:image" content="../assets/img/placeholder-og-1200x630.png">
+<meta property="og:url" content="https://yourdomain.com/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SnapStory – Complete Photobook Web App Admin & Frontend Template">
+<meta name="twitter:description" content="SnapStory is a complete Bootstrap 5 template with fully integrated frontend and admin panel workflows for photobook web applications. Launch your photobook business with ready-made pages, clean code, and seamless UI/UX design.">
+<meta name="twitter:image" content="../assets/img/placeholder-og-1200x630.png">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
+
 </head>
 <body class="bg-light">
     <!-- Navigation -->
@@ -51,8 +61,8 @@
                                 </div>
 
                                 <!-- Progress Indicator -->
-                                <div class="progress mb-4" style="height: 4px;">
-                                    <div class="progress-bar" role="progressbar" style="width: 0%" id="signupProgress"></div>
+                                <div class="progress mb-4" class="migrated-inline-style-71">
+                                    <div class="progress-bar" role="progressbar" class="migrated-inline-style-72" id="signupProgress"></div>
                                 </div>
 
                                 <form id="signupForm" novalidate>
@@ -98,8 +108,8 @@
                                             </button>
                                         </div>
                                         <div class="password-strength mt-2">
-                                            <div class="progress" style="height: 3px;">
-                                                <div class="progress-bar" id="passwordStrength" style="width: 0%"></div>
+                                            <div class="progress" class="migrated-inline-style-73">
+                                                <div class="progress-bar" id="passwordStrength" class="migrated-inline-style-74"></div>
                                             </div>
                                             <small class="text-muted" id="passwordFeedback">Password strength</small>
                                         </div>
@@ -283,306 +293,83 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Enhanced signup functionality
-        const form = document.getElementById('signupForm');
-        const progressBar = document.getElementById('signupProgress');
-        const passwordInput = document.getElementById('password');
-        const confirmPasswordInput = document.getElementById('confirmPassword');
-        const passwordStrength = document.getElementById('passwordStrength');
-        const passwordFeedback = document.getElementById('passwordFeedback');
-        const togglePassword = document.getElementById('togglePassword');
-        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
-        const signupBtn = document.getElementById('signupBtn');
+    
 
-        let formProgress = 0;
+    
 
-        // Password visibility toggle
-        togglePassword.addEventListener('click', function() {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
-        });
+    
 
-        toggleConfirmPassword.addEventListener('click', function() {
-            const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            confirmPasswordInput.setAttribute('type', type);
-            this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
-        });
 
-        // Password strength checker
-        function checkPasswordStrength(password) {
-            let strength = 0;
-            let feedback = '';
+    
 
-            if (password.length >= 8) strength += 25;
-            if (/[a-z]/.test(password)) strength += 25;
-            if (/[A-Z]/.test(password)) strength += 25;
-            if (/[0-9]/.test(password)) strength += 25;
 
-            if (strength < 25) feedback = 'Very weak';
-            else if (strength < 50) feedback = 'Weak';
-            else if (strength < 75) feedback = 'Good';
-            else feedback = 'Strong';
-
-            return { strength, feedback };
-        }
-
-        passwordInput.addEventListener('input', function() {
-            const { strength, feedback } = checkPasswordStrength(this.value);
-            
-            passwordStrength.style.width = strength + '%';
-            
-            if (strength < 25) {
-                passwordStrength.className = 'progress-bar bg-danger';
-            } else if (strength < 50) {
-                passwordStrength.className = 'progress-bar bg-warning';
-            } else if (strength < 75) {
-                passwordStrength.className = 'progress-bar bg-info';
-            } else {
-                passwordStrength.className = 'progress-bar bg-success';
-            }
-            
-            passwordFeedback.textContent = feedback;
-            updateFormProgress();
-        });
-
-        // Form progress tracking
-        function updateFormProgress() {
-            const inputs = form.querySelectorAll('input[required]');
-            let filledInputs = 0;
-            
-            inputs.forEach(input => {
-                if (input.type === 'checkbox') {
-                    if (input.checked) filledInputs++;
-                } else {
-                    if (input.value.trim() !== '') filledInputs++;
-                }
-            });
-            
-            formProgress = (filledInputs / inputs.length) * 100;
-            progressBar.style.width = formProgress + '%';
-            
-            if (formProgress === 100) {
-                progressBar.className = 'progress-bar bg-success';
-            } else if (formProgress > 50) {
-                progressBar.className = 'progress-bar bg-info';
-            } else {
-                progressBar.className = 'progress-bar bg-warning';
-            }
-        }
-
-        // Real-time validation
-        form.querySelectorAll('input').forEach(input => {
-            input.addEventListener('input', updateFormProgress);
-            input.addEventListener('blur', validateField);
-        });
-
-        function validateField(event) {
-            const field = event.target;
-            const value = field.value.trim();
-            
-            // Remove existing validation classes
-            field.classList.remove('is-valid', 'is-invalid');
-            
-            // Validate based on field type
-            let isValid = true;
-            
-            switch(field.type) {
-                case 'email':
-                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                    isValid = emailRegex.test(value);
-                    break;
-                case 'password':
-                    if (field.id === 'password') {
-                        isValid = value.length >= 8;
-                    } else if (field.id === 'confirmPassword') {
-                        const password = document.getElementById('password').value;
-                        isValid = value === password;
-                    }
-                    break;
-                case 'checkbox':
-                    isValid = field.checked;
-                    break;
-                default:
-                    isValid = value.length > 0;
-            }
-            
-            if (isValid) {
-                field.classList.add('is-valid');
-            } else {
-                field.classList.add('is-invalid');
-            }
-        }
-
-        // Form submission
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Validate all fields
-            let isValid = true;
-            form.querySelectorAll('input[required]').forEach(input => {
-                input.dispatchEvent(new Event('blur'));
-                if (input.classList.contains('is-invalid')) {
-                    isValid = false;
-                }
-            });
-            
-            if (!isValid) {
-                showToast('Please fix the errors in the form.', 'danger');
-                return;
-            }
-            
-            // Show loading state
-            const originalText = signupBtn.innerHTML;
-            signupBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Creating Account...';
-            signupBtn.disabled = true;
-            
-            // Simulate API call
-            setTimeout(() => {
-                showToast('Account created successfully! Redirecting...', 'success');
-                
-                setTimeout(() => {
-                    window.location.href = 'dashboard.html';
-                }, 1500);
-            }, 2000);
-        });
-
-        // Toast notification system
-        function showToast(message, type = 'info') {
-            const toast = document.createElement('div');
-            toast.className = `toast align-items-center text-white bg-${type} border-0 position-fixed`;
-            toast.style.top = '20px';
-            toast.style.right = '20px';
-            toast.style.zIndex = '9999';
-            
-            toast.innerHTML = `
-                <div class="d-flex">
-                    <div class="toast-body">
-                        ${message}
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3 d-flex align-items-center">
+                        <i class="fas fa-book-open me-2"></i>SnapStory
+                    </h5>
+                    <p class="mb-3">Create beautiful photo books online with our professional templates and easy-to-use editor.</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
                     </div>
-                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
                 </div>
-            `;
-            
-            document.body.appendChild(toast);
-            const bsToast = new bootstrap.Toast(toast);
-            bsToast.show();
-            
-            toast.addEventListener('hidden.bs.toast', function() {
-                document.body.removeChild(toast);
-            });
-        }
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Product</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="templates.html" class="text-decoration-none">Templates</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li><a href="features.html" class="text-decoration-none">Features</a></li>
+                        <li><a href="samples.html" class="text-decoration-none">Samples</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="help.html" class="text-decoration-none">Help Center</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact Us</a></li>
+                        <li><a href="live-chat.html" class="text-decoration-none">Live Chat</a></li>
+                        <li><a href="faq.html" class="text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-decoration-none">About</a></li>
+                        <li><a href="blog.html" class="text-decoration-none">Blog</a></li>
+                        <li><a href="careers.html" class="text-decoration-none">Careers</a></li>
+                        <li><a href="press.html" class="text-decoration-none">Press</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="privacy.html" class="text-decoration-none">Privacy</a></li>
+                        <li><a href="terms.html" class="text-decoration-none">Terms</a></li>
+                        <li><a href="cookies.html" class="text-decoration-none">Cookies</a></li>
+                        <li><a href="gdpr.html" class="text-decoration-none">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 SnapStory. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <img src="../assets/img/placeholder-secure-payment-200x30.png" alt="Secure Payment" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </footer>
 
-        // Social login handlers
-        document.querySelectorAll('.btn-outline-secondary').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const provider = this.textContent.trim();
-                showToast(`Connecting to ${provider}...`, 'info');
-            });
-        });
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/frontend.js"></script>
 
-        // Initialize form
-        document.addEventListener('DOMContentLoaded', function() {
-            updateFormProgress();
-            
-            // Add entrance animations
-            const benefitItems = document.querySelectorAll('.benefit-item');
-            benefitItems.forEach((item, index) => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateX(20px)';
-                
-                setTimeout(() => {
-                    item.style.transition = 'all 0.6s ease-out';
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateX(0)';
-                }, index * 200);
-            });
-        });
-    </script>
-
-    <style>
-        /* Enhanced signup styles */
-        .signup-benefits {
-            padding: 2rem 0;
-        }
-        
-        .benefit-item {
-            transition: var(--transition);
-        }
-        
-        .benefit-item:hover {
-            transform: translateX(10px);
-        }
-        
-        .benefit-icon {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        
-        .benefit-item:hover .benefit-icon {
-            transform: scale(1.1);
-        }
-        
-        .testimonial-item {
-            transition: var(--transition);
-        }
-        
-        .testimonial-item:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md) !important;
-        }
-        
-        .guest-checkout {
-            transition: var(--transition);
-        }
-        
-        .guest-checkout:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-sm);
-        }
-        
-        .progress {
-            background-color: #e9ecef;
-        }
-        
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
-        }
-        
-        .form-control.is-valid {
-            border-color: var(--success-color);
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.15);
-        }
-        
-        .form-control.is-invalid {
-            border-color: var(--danger-color);
-            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15);
-        }
-        
-        .btn:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-        
-        .stars {
-            font-size: 1.2rem;
-        }
-        
-        @media (max-width: 768px) {
-            .signup-benefits {
-                padding: 1rem 0;
-            }
-            
-            .benefit-item:hover {
-                transform: none;
-            }
-        }
-    </style>
 </body>
 </html> 
